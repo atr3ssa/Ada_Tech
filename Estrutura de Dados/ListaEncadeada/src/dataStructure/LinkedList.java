@@ -157,6 +157,16 @@ public class LinkedList { //LISTA LIGADA
        return temp;
    }
    
+   //Operação BÔNUS
+   public boolean set(int index, String data){
+      Node temp = get(index);
+      if(temp != null){
+          temp.data = data;
+          return true;
+      }
+      return false;
+   }
+   
    //Operação inserir em determinada posição
    public boolean insert(int index, String data){
        if(index < 0 || index > length) return false;
@@ -176,23 +186,45 @@ public class LinkedList { //LISTA LIGADA
         return true;
    }
    
+   //Operação Remover de determinada posição
+   public Node Remove(int index){
+     if(index < 0 || index > length) return null;
+     if(index == 0) return RemoveFirst();
+     if (index == length -1) return RemoveLast();
+     Node prev = get(index -1);
+     Node temp = prev.next;
+     
+     prev.next = temp.next;
+     temp.next = null;
+        length--;
+        
+        return temp;
+        
+   }
+   
    
     public static void main(String[] args) { // rodar os métodos
         LinkedList list = new LinkedList("elemento 1");
+        
         list.append("elemento 2");
         list.append("elemento 3");
         list.prepend("elemento 0");
-        list.insert(2, "elemento 2.5");
-        System.out.println(list.get(2).data);
         list.print();
         
-        list.getHead();
-        list.getTail();
-        list.getLength();
-        
-        System.err.println("O " + list.RemoveLast().data + " foi removido da CAUDA! e o " + list.RemoveFirst().data + " foi removido da CABEÇA!");
-        //System.err.println("O " + list.RemoveFirst().data + " foi removido da CABEÇA!" );
+        list.Remove(2);
         list.print();
+//        list.insert(2, "elemento 2.5");
+//        list.set(0, "elemento A");
+//        System.out.println(list.get(2).data);
+//        list.print();
+//        
+//        list.getHead();
+//        list.getTail();
+//        list.getLength();
+//        
+//        System.err.println("O " + list.RemoveLast().data + " foi removido da CAUDA! e o " + list.RemoveFirst().data + " foi removido da CABEÇA!");
+//        //System.err.println("O " + list.RemoveFirst().data + " foi removido da CABEÇA!" );
+//        list.print();
         
     }
     
