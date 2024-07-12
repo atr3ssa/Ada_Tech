@@ -1,0 +1,5 @@
+id_disciplina,nome,ementa
+4,Quimica,transformacoes e processos quimicos
+5,Historia,Feudalismo
+6,Geografia,geopolitica
+7,Biologia,corpo humano
