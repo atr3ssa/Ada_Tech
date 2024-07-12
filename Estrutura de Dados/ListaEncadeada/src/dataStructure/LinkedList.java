@@ -1,6 +1,7 @@
-
+//pacote
 package dataStructure;
 
+//Operação Criar lista e esvaziar lista
 
 public class LinkedList { //LISTA LIGADA
     //Lista dinâmica linear, composta por nós
@@ -67,5 +68,17 @@ public class LinkedList { //LISTA LIGADA
    public void getLength(){ // método Tamanho
        System.out.println("Length: " + this.length); // mostra o tamanho da lista
    }
+   public void makeEmpty(){
+       head = null;
+       tail = null;
+       length = 0;
+   }
+   
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList("elemento 1");
+        list.getHead();
+        list.getTail();
+        list.getLength();
+    }
     
 }
