@@ -76,11 +76,13 @@ public class LinkedList { //LISTA LIGADA
    
    //Operação IMPRIMIR 
    public void print(){ //método print
+       System.out.println("######################################################");
        Node temp =this.head; // temporário inicializa na cabeça / posição FIXA
        while(temp != null){ // enquanto o temporário for diferente de null, qunado for null significa que chegou no final da lista
            System.out.println(temp.data); // mostrar o dado onde o temporário se encontra
            temp = temp.next; // temporário recebe o próximo
        }
+       System.out.println("######################################################");
        
    }
    
@@ -94,14 +96,40 @@ public class LinkedList { //LISTA LIGADA
          tail.next = newNode; //O próximo da cauda recebe o novo nó
          tail = newNode; // cauda recebe o novo nó
      }
+     length++;
    }
    
+   //Operação Remover do FINAL(Cauda)
+   public Node RemoveLast(){ // método p remover o último item da lista (nó)
+       if(length == 0)return null;  //Se o tamanho for igual a 0 (vazio), será retornado nulo
+       Node pre = head; // o pre será o head 
+       Node temp = null; // temporário será nulo
+       
+       while(pre.next != tail){ //enquanto nó depois do pre for diferente da cauda
+          pre = pre.next; //pre vai receber o próximo, ou seja, vai navegar de forma linear
+       } //Quando o nó depois do pre for igual a cauda
+       temp = tail;// o temporario vai armazenar a cauda 
+       tail = pre; //a cauda vai receber o pre
+       tail.next = null; // o p´roximo da nova cauda será vazio
+       
+       length--;
+       if(length == 0){
+           head = null;
+           tail = null;
+       }
+       return temp;
+   }
     public static void main(String[] args) { // rodar os métodos
         LinkedList list = new LinkedList("elemento 1");
+        list.append("elemento 2");
+        list.append("elemento 3");
         list.getHead();
         list.getTail();
         list.getLength();
+        
+        System.out.println(list.RemoveLast().data);
         list.print();
+        
     }
     
 }
