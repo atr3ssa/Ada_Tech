@@ -12,7 +12,7 @@ public class LinkedList { //LISTA LIGADA
     //Principais operações: //Métodos
     
         //Add item: 
-            //prepand(inicio=cabeça), append(final=cauda), insert(criar método p inserir em determinada posição)
+            //prepend(inicio=cabeça), append(final=cauda), insert(criar método p inserir em determinada posição)
         //Ler os itens:
             //getHead(inicio), getTail(final), get(criar método p ler determinada posição)
         //Remover:
@@ -86,6 +86,19 @@ public class LinkedList { //LISTA LIGADA
        
    }
    
+   //Operação INSERIR no COMEÇO(Cabeça)
+   public void prepend(String data){
+       Node newNode = new Node(data);//Nó novoNó = novo Nó(dado);
+       if(length == 0){ // se tamanho for igual a 0
+           head = newNode; // cabeça é apontada pelo novo nó
+           tail = newNode; // cauda é apontada pelo novo nó
+       } else { //senão
+           newNode.next = head; //O próximo do novo Nó recebe a cabeça;
+           head = newNode; // A Cabeça recebe o novo nó
+       }
+       length++;
+   }
+   
    //Operação INSERIR no FINAL(Cauda)
    public void append(String data){
      Node newNode = new Node(data); //Nó novoNó = novo Nó(dado);
@@ -99,6 +112,20 @@ public class LinkedList { //LISTA LIGADA
      length++;
    }
    
+   //Operação Remover do Ínicio(Cabeça)
+   public Node RemoveFirst(){
+      if(length == 0)return null;  //Se o tamanho for igual a 0 (vazio), será retornado nulo
+      Node temp = head; // O nó temporáro recebe a cabeça
+      head = head.next; // A cabeça recebe o próximo do nó temporário
+      temp.next = null; //despluguei da lista o temp, colocando o próximo p ser nulo
+      length--; // diminuo a lista
+      
+      if(length == 0){
+           head = null;
+           tail = null;
+       }
+      return temp; 
+   }
    //Operação Remover do FINAL(Cauda)
    public Node RemoveLast(){ // método p remover o último item da lista (nó)
        if(length == 0)return null;  //Se o tamanho for igual a 0 (vazio), será retornado nulo
@@ -119,15 +146,52 @@ public class LinkedList { //LISTA LIGADA
        }
        return temp;
    }
+   
+   // Operação Ler determinada posição
+   public Node get(int index){
+      if(index < 0 || index >= length) return null;
+      Node temp= head;
+      for(int i = 0; i < index;i++){ //para i = 0, vai ser acrescentado 1 enquanto o i for menor que o index
+        temp = temp.next;
+      }
+       return temp;
+   }
+   
+   //Operação inserir em determinada posição
+   public boolean insert(int index, String data){
+       if(index < 0 || index > length) return false;
+       if(index == 0){
+           prepend(data);
+           return true;
+       }
+       if (index == length){
+           append(data);
+           return true;
+       }
+       Node newNode = new Node(data);
+        Node temp = get(index -1); //
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
+   }
+   
+   
     public static void main(String[] args) { // rodar os métodos
         LinkedList list = new LinkedList("elemento 1");
         list.append("elemento 2");
         list.append("elemento 3");
+        list.prepend("elemento 0");
+        list.insert(2, "elemento 2.5");
+        System.out.println(list.get(2).data);
+        list.print();
+        
         list.getHead();
         list.getTail();
         list.getLength();
         
-        System.out.println(list.RemoveLast().data);
+        System.err.println("O " + list.RemoveLast().data + " foi removido da CAUDA! e o " + list.RemoveFirst().data + " foi removido da CABEÇA!");
+        //System.err.println("O " + list.RemoveFirst().data + " foi removido da CABEÇA!" );
         list.print();
         
     }
