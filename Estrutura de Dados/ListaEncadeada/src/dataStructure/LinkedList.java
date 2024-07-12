@@ -26,7 +26,7 @@ public class LinkedList { //LISTA LIGADA
     
     private Node head; // Cabeça
     private Node tail; // Cauda
-    private int lentgh;// Tamanho
+    private int length;// Tamanho
     
 
     class Node { // Classe interna NÓ
@@ -37,10 +37,35 @@ public class LinkedList { //LISTA LIGADA
 
         public Node(String data) { //Constructor = Inicializar
             this.data = data;
-        }
-        
-        
-        
+        }  
     }
+    public LinkedList(String data){ // Constructor
+        length = 1; // tamanho 1
+        Node newNode = new Node(data);
+        head = newNode; // cabeça aponta p o único nó da lista
+        tail = newNode; // cauda aponta p o único nó da lista 
+    }
+    
+    //Métodos:
+    
+   public void getHead() { //método Cabeça
+       
+    if(this.head == null){
+        System.out.println("Lista vazia");
+    }else {
+        System.out.println("Head: " + head.data);
+    }
+} 
+   public void getTail(){ //método Cauda
+       
+      if(this.tail == null){
+        System.out.println("Lista vazia");
+    } else {
+          System.out.println("Tail: " + tail.data);
+      } 
+   }
+   public void getLength(){ // método Tamanho
+       System.out.println("Length: " + this.length); // mostra o tamanho da lista
+   }
     
 }
