@@ -68,17 +68,40 @@ public class LinkedList { //LISTA LIGADA
    public void getLength(){ // método Tamanho
        System.out.println("Length: " + this.length); // mostra o tamanho da lista
    }
-   public void makeEmpty(){
+   public void makeEmpty(){ // método p esvaziar a lista
        head = null;
        tail = null;
        length = 0;
    }
    
-    public static void main(String[] args) {
+   //Operação IMPRIMIR 
+   public void print(){ //método print
+       Node temp =this.head; // temporário inicializa na cabeça / posição FIXA
+       while(temp != null){ // enquanto o temporário for diferente de null, qunado for null significa que chegou no final da lista
+           System.out.println(temp.data); // mostrar o dado onde o temporário se encontra
+           temp = temp.next; // temporário recebe o próximo
+       }
+       
+   }
+   
+   //Operação INSERIR no FINAL(Cauda)
+   public void append(String data){
+     Node newNode = new Node(data); //Nó novoNó = novo Nó(dado);
+     if(length == 0){ // se tamanho for igual a 0
+         head = newNode; // cabeça é apontada pelo novo nó
+         tail = newNode;  // cauda é apontada pelo novo nó
+     } else { //senão
+         tail.next = newNode; //O próximo da cauda recebe o novo nó
+         tail = newNode; // cauda recebe o novo nó
+     }
+   }
+   
+    public static void main(String[] args) { // rodar os métodos
         LinkedList list = new LinkedList("elemento 1");
         list.getHead();
         list.getTail();
         list.getLength();
+        list.print();
     }
     
 }
