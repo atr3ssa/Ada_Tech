@@ -46,7 +46,7 @@ class Node { // Classe nó
     
     // OPERAÇÃO LER TOPO (getTop)
     
-    public void getTop(){
+    public void getTop(){ // Método getTop
         if(top == null){ // Se o topo for igual a null (nada)
             System.out.println("Pilha vazia"); // mostre: " Pilha vazia"
         } else { // senão
@@ -54,6 +54,13 @@ class Node { // Classe nó
         }
     }
     
+    // OPERAÇÃO ALTURA DA PILHA (getHeight)
+    
+    public void getHeight(){ // Método get Height
+        System.out.println("Altura: " + height); // Mostre: "Altura: " + (concatenação) altura
+    }
+    
+    // OPERAÇÃO
     
     
     
