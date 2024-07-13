@@ -6,7 +6,7 @@ package main;
 import dataStructure.Stack;
 
 
-public class Main {
+public class InverterPilha {
     
     public static void main(String[] args) {
         
