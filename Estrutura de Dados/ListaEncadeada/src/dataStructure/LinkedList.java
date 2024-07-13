@@ -40,7 +40,8 @@ public class LinkedList { //LISTA LIGADA
             this.data = data;
         }  
     }
-    public LinkedList(String data){ // Constructor
+    
+    public LinkedList(String data){ // Constructor da lista encadeada
         length = 1; // tamanho 1
         Node newNode = new Node(data);
         head = newNode; // cabeça aponta p o único nó da lista

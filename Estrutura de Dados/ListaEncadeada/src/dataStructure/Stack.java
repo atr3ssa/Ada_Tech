@@ -1,6 +1,8 @@
 //pacote
 package dataStructure;
 
+
+//OPERAÇÃO CRIAR PILHA
 public class Stack { // PILHA
     //Pilhas = lista ordenada (ordem de inserção de elementos) = o último elemento inserido será o primeiro a ser tirado
     // LIFO = last in first out (último que entrou será o 1° a sair) ---------------- FILO = First in last out (O 1° que entrou será o último a sair)
@@ -21,7 +23,38 @@ public class Stack { // PILHA
     
     // Altura da pilha (getHeight)
 
+    private Node top; // Nó TOPO;
+    private int height; // Altura da PILHA
+    
+class Node { // Classe nó
+    int value; // vai apresentar um valor int
+    
+    Node next; // vai apontar p o próximo nó
+    
 
+        public Node(int value) { //implementar constructor
+            this.value = value;
+           
+        }  
+}
+    public Stack(int value) { // implementar o constructor da PILHA
+        Node newNode = new Node(value); // recebe um valor inicial que será armazenado no nó
+        top = newNode; // esse nó será o topo da pilha
+        height = 1; // Agr contém 1 elemento (nó) 
+    }
+    // Métodos:
+    
+    // OPERAÇÃO LER TOPO (getTop)
+    
+    public void getTop(){
+        if(top == null){ // Se o topo for igual a null (nada)
+            System.out.println("Pilha vazia"); // mostre: " Pilha vazia"
+        } else { // senão
+            System.out.println("Topo: " + top.value); // mostre: "topo: " + (concatenação) valor do topo
+        }
+    }
+    
+    
     
     
     
