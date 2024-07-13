@@ -23,7 +23,7 @@ public class Main {
         }
         var node = stack.pop();
         while (node != null){ // Enquanto o nó não for vazio
-            System.out.println(node.getValue()); // escrever na tela o seu valor
+            System.out.println(node.getValue());// escrever na tela o seu valor
             node = stack.pop(); // vou pular p outro valor
         }
     }
