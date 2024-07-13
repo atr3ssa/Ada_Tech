@@ -26,7 +26,7 @@ public class Stack { // PILHA
     private Node top; // Nó TOPO;
     private int height; // Altura da PILHA
     
-class Node { // Classe nó
+public class Node { // Classe nó
     int value; // vai apresentar um valor int
     
     Node next; // vai apontar p o próximo nó
@@ -36,6 +36,12 @@ class Node { // Classe nó
             this.value = value;
            
         }  
+
+        public int getValue() { //método get p retornar valor
+            return value;
+        }
+        
+        
 }
     public Stack(int value) { // implementar o constructor da PILHA
         Node newNode = new Node(value); // recebe um valor inicial que será armazenado no nó

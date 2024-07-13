@@ -3,6 +3,9 @@ package main;
 
 //  PROBLEMA: INVERTA UM CONJUNTO --- UTILIZANDO UMA PILHA, INVERTA UM CONJUNTO DE DADOS FORNECIDO PELO USUÁRIO
 
+import dataStructure.Stack;
+
+
 public class Main {
     
     public static void main(String[] args) {
@@ -11,9 +14,14 @@ public class Main {
         inverter(numeros); // método inverter
     }
 
-    private static void inverter(int[] numeros) {// criar o método inverter
+    private static void inverter(final int[] numeros) {// criar o método inverter
         //ler o vetor e armazenar dentro de uma pilha
+        Stack stack = new Stack(numeros[0]); // criar pilha q armazena de inicio apenas o 1° elemento
         
+        for (int i = 0; i < numeros.length; i++){ // laço for
+            stack.push(i);
+        }
+        var node =
     }
     
 }
