@@ -117,7 +117,7 @@ public class LinkedList { //LISTA LIGADA
    public Node RemoveFirst(){
       if(length == 0)return null;  //Se o tamanho for igual a 0 (vazio), será retornado nulo
       Node temp = head; // O nó temporáro recebe a cabeça
-      head = head.next; // A cabeça recebe o próximo do nó temporário
+      head = head.next; // A cabeça recebe o próximo 
       temp.next = null; //despluguei da lista o temp, colocando o próximo p ser nulo
       length--; // diminuo a lista
       

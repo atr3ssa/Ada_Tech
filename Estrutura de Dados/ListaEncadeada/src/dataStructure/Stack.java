@@ -84,6 +84,21 @@ class Node { // Classe nó
         }
         height++; // acrescenta
     }
+    
+    // OPERAÇÃO REMOVER (pop)
+    public Node pop(){
+        if(height == 0) return null;// se a altura for igual a 0
+            Node temp = top; // O nó temporáro recebe o topo
+            top = top.next; // O topo recebe o próximo valor
+            temp.next = null; //despluguei da pilha o temp, colocando o próximo p ser nulo
+            height--;
+            
+            if(height == 0){// se a altura for igual a 0
+                top = null;
+            }
+            return temp; 
+    }
+    
     // MAIN
     
     public static void main(String[] args) {
@@ -94,6 +109,13 @@ class Node { // Classe nó
         
         myStack.push(1); // chamando método que insere um nó
         myStack.print(); // chamando método p imprimir na tela
+        myStack.getTop(); // chamando método p mostrar o topo
+        myStack.getHeight(); // chamando método p mostrar a altura
+        
+        
+        System.err.println(myStack.pop().value); // imprime o valor removido --- O último a entrar é sempre o 1° a sair
+        System.err.println(myStack.pop().value); // imprime o valor removido --- O último a entrar é sempre o 1° a sair
+        System.err.println(myStack.pop() == null); // se a pilha estiver vazia, dará true
     }
     
     
