@@ -72,13 +72,28 @@ class Node { // Classe nó
         System.out.println("##################################################");
     }
     
+    //OPERAÇÃO INSERIR (push)
+    
+    public void push(int value){
+        Node newNode = new Node(value);
+        if(height == 0){ // se a altura for igual a 0
+           top = newNode;  // o novo nó aponta p o topo
+        } else { //senão
+            newNode.next = top; //o nó após o novo nó recebe o topo
+            top = newNode; // o topo recebe o novo nó
+        }
+        height++; // acrescenta
+    }
     // MAIN
     
     public static void main(String[] args) {
-        Stack myStack = new Stack(1);
+        Stack myStack = new Stack(2);
         myStack.print(); // chamando método p imprimir na tela
         myStack.getTop(); // chamando método p mostrar o topo
         myStack.getHeight(); // chamando método p mostrar a altura
+        
+        myStack.push(1); // chamando método que insere um nó
+        myStack.print(); // chamando método p imprimir na tela
     }
     
     
