@@ -19,9 +19,13 @@ public class Main {
         Stack stack = new Stack(numeros[0]); // criar pilha q armazena de inicio apenas o 1° elemento
         
         for (int i = 0; i < numeros.length; i++){ // laço for
-            stack.push(i);
+            stack.push(numeros[i]);
         }
-        var node =
+        var node = stack.pop();
+        while (node != null){ // Enquanto o nó não for vazio
+            System.out.println(node.getValue()); // escrever na tela o seu valor
+            node = stack.pop(); // vou pular p outro valor
+        }
     }
     
 }
