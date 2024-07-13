@@ -18,7 +18,7 @@ public class Main {
         //ler o vetor e armazenar dentro de uma pilha
         Stack stack = new Stack(numeros[0]); // criar pilha q armazena de inicio apenas o 1° elemento
         
-        for (int i = 0; i < numeros.length; i++){ // laço for
+        for (int i = 1; i < numeros.length; i++){ // laço for
             stack.push(numeros[i]);
         }
         var node = stack.pop();
