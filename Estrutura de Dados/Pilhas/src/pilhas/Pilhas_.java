@@ -7,5 +7,34 @@ public class Pilhas_ {
     // Possui apenas 1 extremidade, a extremidade em que insiro elementos é a mesma que eu retiro elementos
     // extreminada denominada como TOP ou TOPO
     // ex: Pilha de pratos, vc enxuga o primeiro de cima que foi o último a ser lavado
+    // A INSERÇÃO e a REMOÇÃO são feitas apenas pelo topo da lista, pela cabeça, não podendo selescionar uma posição específica
+    // Muito usada em: voltar no histórico de browser, validar parenteses, colchetes e chaves e esxpressões prefixa, posfixa...
+
+    //PRINCIPAIS OPERAÇÕES:
     
-}
+    // Add item (push)
+    // Remover item (pop)
+    // Ler topo (getTop)
+    // Imprimir (print)
+    
+    // OPERAÇÕES OPCIONAIS:
+    
+    // Altura da pilha (getHeight)
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}   
+    
+
