@@ -60,7 +60,14 @@ class Node { // Classe nó
         System.out.println("Altura: " + height); // Mostre: "Altura: " + (concatenação) altura
     }
     
-    // OPERAÇÃO
+    // OPERAÇÃO IMPRIMIR (print)
+    
+    public void print(){
+        System.out.println("##################################################");
+        Node temp = this.top; // temporário inicializa no topo/ posição FIXA
+        
+        System.out.println("##################################################");
+    }
     
     
     
