@@ -76,9 +76,9 @@ class Node { // Classe nó
     
     public static void main(String[] args) {
         Stack myStack = new Stack(1);
-        myStack.print();
-        myStack.getTop();
-        myStack.getHeight();
+        myStack.print(); // chamando método p imprimir na tela
+        myStack.getTop(); // chamando método p mostrar o topo
+        myStack.getHeight(); // chamando método p mostrar a altura
     }
     
     
