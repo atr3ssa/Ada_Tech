@@ -63,7 +63,7 @@ class Node { // Classe nó
     // OPERAÇÃO IMPRIMIR (print)
     
     public void print(){ //Método print
-        System.out.println("##################################################");
+        System.out.println("################### P I L H A ####################");
         Node temp = top; // temporário inicializa no topo/ posição FIXA
         while(temp != null){ //siga em looping enquanto o temporário for diferente de null
             System.out.println(temp.value); // mostrar o valor onde o temporário se encontra  
@@ -72,7 +72,14 @@ class Node { // Classe nó
         System.out.println("##################################################");
     }
     
+    // MAIN
     
+    public static void main(String[] args) {
+        Stack myStack = new Stack(1);
+        myStack.print();
+        myStack.getTop();
+        myStack.getHeight();
+    }
     
     
     
