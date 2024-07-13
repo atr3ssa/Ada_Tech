@@ -62,10 +62,13 @@ class Node { // Classe nó
     
     // OPERAÇÃO IMPRIMIR (print)
     
-    public void print(){
+    public void print(){ //Método print
         System.out.println("##################################################");
-        Node temp = this.top; // temporário inicializa no topo/ posição FIXA
-        
+        Node temp = top; // temporário inicializa no topo/ posição FIXA
+        while(temp != null){ //siga em looping enquanto o temporário for diferente de null
+            System.out.println(temp.value); // mostrar o valor onde o temporário se encontra  
+            temp = temp.next; // temporário recebe o próximo ( ir p o próximo elemento)
+        }
         System.out.println("##################################################");
     }
     

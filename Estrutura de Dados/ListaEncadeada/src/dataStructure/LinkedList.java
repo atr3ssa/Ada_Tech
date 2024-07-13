@@ -79,7 +79,7 @@ public class LinkedList { //LISTA LIGADA
    public void print(){ //método print
        System.out.println("######################################################");
        Node temp =this.head; // temporário inicializa na cabeça / posição FIXA
-       while(temp != null){ // enquanto o temporário for diferente de null, qunado for null significa que chegou no final da lista
+       while(temp != null){ // enquanto o temporário for diferente de null, quando for null significa que chegou no final da lista
            System.out.println(temp.data); // mostrar o dado onde o temporário se encontra
            temp = temp.next; // temporário recebe o próximo
        }
