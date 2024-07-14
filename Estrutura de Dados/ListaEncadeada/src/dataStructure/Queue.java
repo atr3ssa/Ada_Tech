@@ -73,7 +73,7 @@ public class Queue { // FILAS
         System.out.println("Tamanho: " + this.length); // mostra o tamanho da lista
     }
     
-    // // OPERAÇÃO Imprimir Fila (print)
+    // OPERAÇÃO Imprimir Fila (print)
     
     public void print(){
         System.out.println("####################### F I L A ###########################");
@@ -85,13 +85,36 @@ public class Queue { // FILAS
         System.out.println("###########################################################");
     }
     
+    // OPERAÇÃO Enfileirar (inserir) (enqueue)
+    
+    public void enqueue(int value){
+        Node newNode = new Node(value);
+        if(length == 0){ // se o tamanho for igual a 0
+            first = newNode; // o novo nó aponta p o primeiro
+            last = newNode;  // o novo nó aponta p o último
+        } else { //senão
+            last.next = newNode; //O próximo do último recebe o novo nó
+            last = newNode; // O último recebe o novo nó
+        }
+        length++;
+    }
+    
     public static void main(String[] args) {
         Queue myQueue = new Queue(1);
         
-        myQueue.print();
-        myQueue.getFirst();
-        myQueue.getLast();
-        myQueue.getLength();
+        myQueue.print(); // imprimir
+        myQueue.getFirst(); // primeiro
+        myQueue.getLast(); // último
+        myQueue.getLength(); // tamanho
+        //
+        myQueue.enqueue(2); // inserir
+        myQueue.print(); // imprimir
+        myQueue.getFirst(); // primeiro
+        myQueue.getLast(); // último
+        myQueue.getLength(); // tamanho
+        //
+        
+        
         
     }
     
