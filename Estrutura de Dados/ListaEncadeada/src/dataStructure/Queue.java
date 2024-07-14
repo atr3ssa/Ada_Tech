@@ -37,6 +37,11 @@ public class Queue { // FILAS
             this.value = value; // recebe um valor e armazena na propriedade de valor desse nó
             
         }  
+
+        public int getValue() {
+            return value;
+        }
+        
     }
 
     public Queue(int value) { // implementar o constructor da Fila
