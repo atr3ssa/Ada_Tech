@@ -67,9 +67,33 @@ public class Queue { // FILAS
         }
     }
     
+    // OPERAÇÃO Imprimir o tamanho da fila (getLength)
     
+    public void getLength(){ // método Tamanho
+        System.out.println("Tamanho: " + this.length); // mostra o tamanho da lista
+    }
     
+    // // OPERAÇÃO Imprimir Fila (print)
     
+    public void print(){
+        System.out.println("####################### F I L A ###########################");
+        Node temp = this.first; // temporário inicializa no 1° / posição FIXA
+        while(temp != null){ // enquanto o temporário for diferente de null, quando for null significa que chegou no final da lista
+           System.out.println(temp.value); // mostrar o dado onde o temporário se encontra
+           temp = temp.next; // temporário recebe o próximo
+       }
+        System.out.println("###########################################################");
+    }
+    
+    public static void main(String[] args) {
+        Queue myQueue = new Queue(1);
+        
+        myQueue.print();
+        myQueue.getFirst();
+        myQueue.getLast();
+        myQueue.getLength();
+        
+    }
     
     
     
