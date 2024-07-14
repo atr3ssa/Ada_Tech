@@ -6,7 +6,7 @@ package main;
 import dataStructure.Queue;
 import java.util.Random;
 
-public class FilaAtendimento {
+public class FilaDeAtendimento {
     
     public static void main(String[] args) {
         int n = 5;
@@ -20,6 +20,13 @@ public class FilaAtendimento {
             cliente = random.nextInt(101); // clente é um int de 100
             System.out.println("Chegou o clinte: " + cliente);
             queue.enqueue(cliente);
+        }
+        
+        // Atendimento dos clientes
+        var node = queue.dequeue();
+        while (node != null){
+            System.out.println("Atendido o cliente: " + node.getValue());
+            node = queue.dequeue();
         }
     }
 }
