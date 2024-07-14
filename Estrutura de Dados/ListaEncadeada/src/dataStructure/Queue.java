@@ -85,7 +85,7 @@ public class Queue { // FILAS
         System.out.println("###########################################################");
     }
     
-    // OPERAÇÃO Enfileirar (inserir) (enqueue)
+    // OPERAÇÃO Enfileirar / Inserir (enqueue)
     
     public void enqueue(int value){
         Node newNode = new Node(value);
@@ -99,6 +99,22 @@ public class Queue { // FILAS
         length++;
     }
     
+     // OPERAÇÃO Desenfileirar / Remover (dequeue)
+    
+    public Node dequeue(){
+        if(length == 0) return null; // Se o tamanho for igual a 0 (vazio), será retornado nulo
+        Node temp = first; // O nó temporáro recebe o primeiro
+        if(length == 1){ // Se o tamanho for igual a 1
+          first = null; // O nó será o primeiro da fila
+          last = null;  // O nó também será o último da fila
+        }else { // senão
+            first = first.next;  // O próximo do primeiro vira o primeiro
+            temp.next = null; // O próximo do nó temporário é nulo, dessa forma sendo desplugado
+        }
+        length--; // decrementar
+        return temp; // retornar temp (o elemento excluído)
+    }
+    
     public static void main(String[] args) {
         Queue myQueue = new Queue(1);
         
@@ -108,13 +124,15 @@ public class Queue { // FILAS
         myQueue.getLength(); // tamanho
         //
         myQueue.enqueue(2); // inserir
+        myQueue.enqueue(3); // inserir
         myQueue.print(); // imprimir
         myQueue.getFirst(); // primeiro
         myQueue.getLast(); // último
         myQueue.getLength(); // tamanho
         //
-        
-        
+        System.err.println(myQueue.dequeue().value); // imprimir o elemento excluído
+        System.err.println(myQueue.dequeue().value); // imprimir o elemento excluído
+        System.err.println(myQueue.dequeue().value); // imprimir o elemento excluído
         
     }
     
