@@ -15,7 +15,15 @@ public class Arvore { // Árvore
         // CHEIA = Quando cada nó possui 2 ou 0 filhos
         // ÁRVORE NÃO CHEIA = nó possui 1 filho
         // ÁRVORE PERFEITA = Uma árvore cheia onde todas as FOLHAS estão no mesmo nível - em cada nível = 2^n 
-            // nível 1 = 1 - nível 2 = 2 - nível 3 = 4 - nível 4 = 8 ...
+            // nível 1 = 1 - nível 2 = 2 - nível 3 = 4 - nível 4 = 8 ... nível 10 = 1024
+    
+            // FÓRMULAS:
+    
+                // elementos por nível = 2^n
+                // elementos 2 ^n+1 -1
+                // altura de uma árvore = n+1
+    
+    
         // ÁRVORE BINÁRIA COMPLETA = Uma árvore cheia em que todos os nós folhas não estão no mesmo nível, MAS se ela estiver incompleta no último nível, todos os nós folhas devem estar no lado esquerdo
     
 }
