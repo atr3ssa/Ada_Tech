@@ -49,6 +49,8 @@ public class Tree { // Árvore
     
     // OPERAÇÕES INICIALIZAR E INSERIR ITEM:
     
+    public Node root; // nó raiz
+    
     public static class Node { // Classe nó
          public int value; // valores inteiros
          public Node left; // nó a esquerda
@@ -56,9 +58,13 @@ public class Tree { // Árvore
 
         public Node(int value) { // constructor
             this.value = value;
-        }
-         
-         
+        }         
+         // não haverá constructor p árvore   
+    }
+    
+    // É FOLHA? (isLeaf)
+    
+    public boolean isLeaf(Node node){
         
     }
     
