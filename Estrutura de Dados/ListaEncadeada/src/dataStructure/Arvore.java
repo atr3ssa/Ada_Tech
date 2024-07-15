@@ -3,6 +3,7 @@ package dataStructure;
 
 
 public class Arvore { // Árvore
+    
     // Arvore = Estrutura de dados não linear / Semelhante a uma árvore genealógica
     // Em cada arvore, cada nó pode ser ligado com vários outros nós
     // RAIZ = nó que não possui pai
@@ -26,5 +27,31 @@ public class Arvore { // Árvore
     
     
         // ÁRVORE BINÁRIA COMPLETA = Uma árvore cheia em que todos os nós folhas não estão no mesmo nível, MAS se ela estiver incompleta no último nível, todos os nós folhas devem estar no lado esquerdo
+    
+    // VANTAGENS:
+        // não preciso de árvores enormes p guardar um grade número de dados
+        // armazenamento de elementos e localização
+        // muito usada p implementação de índices de banco de dados
+    
+    // PRINCIPAIS OPERAÇÕES: (não é linear, há várias (3) formas de percorrer um árvore
+    
+    // INICIALIZAÇÃO
+    // INSERIR
+    // É FOLHA? (isLeaf)
+    // TRAVESSIA:
+        // PRÉ ODEM :
+        // EM ORDEM :
+        // PÓS ORDEM :
+    // BUSCA
+        // BUSCA EM LARGURA (BFS)
+        // BUSCA EM PROFUNDIDADE (DFS)
+    
+    
+    // OPERAÇÕES INICIALIZAR E INSERIR ITEM:
+    
+    
+    
+    
+    
     
 }
