@@ -2,7 +2,7 @@
 package dataStructure;
 
 
-public class Arvore { // Árvore
+public class Tree { // Árvore
     
     // Arvore = Estrutura de dados não linear / Semelhante a uma árvore genealógica
     // Em cada arvore, cada nó pode ser ligado com vários outros nós
@@ -49,7 +49,18 @@ public class Arvore { // Árvore
     
     // OPERAÇÕES INICIALIZAR E INSERIR ITEM:
     
-    
+    public static class Node { // Classe nó
+         public int value; // valores inteiros
+         public Node left; // nó a esquerda
+         public Node right; // nó a direta
+
+        public Node(int value) { // constructor
+            this.value = value;
+        }
+         
+         
+        
+    }
     
     
     
