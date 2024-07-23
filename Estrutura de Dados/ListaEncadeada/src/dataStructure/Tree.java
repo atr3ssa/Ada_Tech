@@ -61,7 +61,8 @@ public class Tree { // Árvore
         }         
          // não haverá constructor p árvore  
         
-        public boolean isLeaf() {
+        // Método isLeaf dentro do nó
+        public boolean isLeaf() { // verificar se o nó a direita e a esquerda estão vazios
             return (this.left == null) && (this.right == null);
         }
     }
