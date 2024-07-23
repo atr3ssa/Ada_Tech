@@ -54,19 +54,21 @@ public class Tree { // Árvore
     public static class Node { // Classe nó
          public int value; // valores inteiros
          public Node left; // nó a esquerda
-         public Node right; // nó a direta
+         public Node right; // nó a direita
 
         public Node(int value) { // constructor
             this.value = value;
         }         
-         // não haverá constructor p árvore   
+         // não haverá constructor p árvore  
+        
+        public boolean isLeaf() {
+            return (this.left == null) && (this.right == null);
+        }
     }
     
     // É FOLHA? (isLeaf)
     
-    public boolean isLeaf(Node node){
-        
-    }
+   
     
     
     
