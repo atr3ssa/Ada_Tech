@@ -76,7 +76,7 @@ public class Tree { // Árvore
             Node newNode = new Node(value);
             Queue<Node> queue = new LinkedList<>();
             queue.add(root);
-            while(queue.size() >0) {
+            while(queue.size()>0) {
                 Node currentNode = queue.remove();
                 if(currentNode.left == null){
                     currentNode.left = newNode;
