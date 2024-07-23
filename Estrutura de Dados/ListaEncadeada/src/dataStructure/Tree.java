@@ -39,7 +39,7 @@ public class Tree { // Árvore
     // INSERIR
     // É FOLHA? (isLeaf)
     // TRAVESSIA:
-        // PRÉ ODEM :
+        // PRÉ ORDEM :
         // EM ORDEM :
         // PÓS ORDEM :
     // BUSCA
