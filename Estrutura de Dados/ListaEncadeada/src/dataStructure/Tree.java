@@ -80,8 +80,14 @@ public class Tree { // Árvore
                 Node currentNode = queue.remove();
                 if(currentNode.left == null){
                     currentNode.left = newNode;
+                    break;
                 } else{
-                    queue.add()
+                    queue.add(currentNode.left);
+                }
+                if (currentNode.right == null) {
+                    currentNode.right = newNode;
+                } else{
+                    queue.add(currentNode.right);
                 }
             }
         }
