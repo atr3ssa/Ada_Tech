@@ -76,6 +76,7 @@ public class Tree { // Árvore
             Node newNode = new Node(value); // novo nó
             Queue<Node> queue = new LinkedList<>(); // implementação será uma lista ligada
             queue.add(root); // add na fila o nó raiz
+
             while(queue.size()>0) { // enquanto minha fila tiver elementos
                 Node currentNode = queue.remove(); // vou ler o elemento da fila e retirar da fila
                 if(currentNode.left == null){ // se o elemento corrente, o lado esquerdo estiver vazio
