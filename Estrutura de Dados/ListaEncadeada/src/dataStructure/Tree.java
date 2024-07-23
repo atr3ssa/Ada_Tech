@@ -61,13 +61,33 @@ public class Tree { // Árvore
         }         
          // não haverá constructor p árvore  
         
+        
+        // É FOLHA? (isLeaf) 
+        
         // Método isLeaf dentro do nó
         public boolean isLeaf() { // verificar se o nó a direita e a esquerda estão vazios
             return (this.left == null) && (this.right == null);
         }
     }
     
-    // É FOLHA? (isLeaf)
+    public void insert(int value){
+        if (root == null) root = new Node(value);
+        else{
+            Node newNode = new Node(value);
+            Queue<Node> queue = new LinkedList<>();
+            queue.add(root);
+            while(queue.size() >0) {
+                Node currentNode = queue.remove();
+                if(currentNode.left == null){
+                    currentNode.left = newNode;
+                } else{
+                    queue.add()
+                }
+            }
+        }
+    }
+    
+    
     
    
     
