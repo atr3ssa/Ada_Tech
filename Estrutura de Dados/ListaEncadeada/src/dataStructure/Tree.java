@@ -1,8 +1,8 @@
 // pacote
 package dataStructure;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.LinkedList; // importar LinkedList
+import java.util.Queue; // importar Queue
 
 public class Tree { // Árvore
     
@@ -41,9 +41,9 @@ public class Tree { // Árvore
     // INSERIR
     // É FOLHA? (isLeaf)
     // TRAVESSIA:
-        // PRÉ ORDEM :
-        // EM ORDEM :
-        // PÓS ORDEM :
+        // PRÉ ORDEM : raiz* - esquerda - direita (1°)
+        // EM ORDEM : leitura normal esquerda - raiz* - direita (meio)
+        // PÓS ORDEM : esquerda - direita - raiz* (último)
     // BUSCA
         // BUSCA EM LARGURA (BFS)
         // BUSCA EM PROFUNDIDADE (DFS)
@@ -95,6 +95,10 @@ public class Tree { // Árvore
                 }
             }
         }
+    }
+    
+    public void preOrder(){
+        
     }
     
     
