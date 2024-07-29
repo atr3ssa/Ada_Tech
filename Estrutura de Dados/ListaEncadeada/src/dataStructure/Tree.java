@@ -105,7 +105,9 @@ public class Tree { // Árvore
         // recebe de parametro um nó
         // R - E - D
         if(node == null) return; // se o nó for igual a 0, não farei nada, apenas retornará;
-        
+        System.out.println(node.value); // imprimir o valor do nó
+        preOrder(node.left); // lado esquerdo do nó
+        preOrder(node.right); // lado direito do nó
         
     }
     
@@ -114,9 +116,18 @@ public class Tree { // Árvore
         Tree tree = new Tree(); // criei minha arvore, que a principio está vazia
         
         //inserindo na arvore
-        tree.insert(1); 
-        tree.insert(2);
-        tree.insert(3);
+        tree.insert(37); 
+        tree.insert(11);
+        tree.insert(66);
+        tree.insert(8);
+        tree.insert(17);
+        tree.insert(42);
+        tree.insert(42);
+        tree.insert(72);
+        
+        System.out.println("###############");
+        
+        System.out.println("###############");
         
         System.out.println(tree.root.value); // mandar imprimir o valor da raiz da arvore
         System.out.println(tree.root.left.value); // mandar imprimir o valor do lado esquerdo da raiz da arvore
