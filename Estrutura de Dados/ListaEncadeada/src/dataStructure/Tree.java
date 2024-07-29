@@ -111,6 +111,34 @@ public class Tree { // Árvore
         
     }
     
+    public void inOrder(){ // esquerda - raiz - direita
+        inOrder(root); // algoritmo recursivo - imprimindo a partir da raiz da arvore em questão
+    }
+    
+    private void inOrder(final Node node){
+        // recebe de parametro um nó
+        // E - R - D
+        if(node == null) return; // se o nó for igual a 0, não farei nada, apenas retornará;
+        inOrder(node.left); // lado esquerdo do nó
+        System.out.println(node.value); // imprimir o valor do nó
+        inOrder(node.right); // lado direito do nó
+    }
+    
+    public void posOrder(){ // esquerda - direita - raiz
+        inOrder(root); // algoritmo recursivo - imprimindo a partir da raiz da arvore em questão
+    }
+    
+    private void posOrder(final Node node){
+        // recebe de parametro um nó
+        // E - D - R
+        if(node == null) return; // se o nó for igual a 0, não farei nada, apenas retornará;
+        posOrder(node.left); // lado esquerdo do nó
+        posOrder(node.right); // lado direito do nó
+        System.out.println(node.value); // imprimir o valor do nó
+    }
+    
+    
+    
     
     public static void main(String[] args) {
         Tree tree = new Tree(); // criei minha arvore, que a principio está vazia
@@ -122,12 +150,16 @@ public class Tree { // Árvore
         tree.insert(8);
         tree.insert(17);
         tree.insert(42);
-        tree.insert(42);
         tree.insert(72);
         
+        System.out.println("#######preOrder########");
+        tree.preOrder(); // chamei o método preOrder
+        System.out.println("#######inOrder########");
+        tree.inOrder();
+        System.out.println("#######posOrder########");
+        tree.posOrder();
         System.out.println("###############");
         
-        System.out.println("###############");
         
         System.out.println(tree.root.value); // mandar imprimir o valor da raiz da arvore
         System.out.println(tree.root.left.value); // mandar imprimir o valor do lado esquerdo da raiz da arvore
