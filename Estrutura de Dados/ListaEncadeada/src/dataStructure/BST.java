@@ -25,13 +25,18 @@ public class BST { // Binary Search Tree
                         // insert(right, newItem)
                     // else
                         // raiz.right = newItem
-        // Contém item? (contains)
+        // Contém item? (contains) - similar a inserção
+            // if (raiz == null) false
+            // if (item == raiz) true
+            // if (item < raiz)
+                // contains(left, item)
+            // else
+                // contains(right, newItem
         // Remover item (delete)
     
     
     public Node root; // nó raiz
-
-    
+ 
     public class Node { // Classe nó
          public int value; // valores inteiros
          public Node left; // nó a esquerda
@@ -80,13 +85,35 @@ public class BST { // Binary Search Tree
         inOrder(node.right); // lado direito do nó
     }
     
+    // Contém, item? 
+    
+    public boolean contains(int value){ // método booleano, indico o item que eu quero pesquisar
+        // será feito de forma recursiva
+        return contains(root, value); // método recursivo parte 01
+        
+    }
+    
+     private boolean contains(final Node root, final int value) { // método recursivo parte 02
+         if(root == null) return false; // se a raiz for nula, retono falso
+         if(root.value == value) return true; // se o valor da raiz for igual ao valor, retorno verdadeiro
+         if(value > root.value) return contains(root.right, value); // se o valor for maior que o valor da raiz, retorno contains( valor do nó da direita)
+         else return contains(root.left, value); // senão, retorno o valor do nó a esquerda da raiz
+        
+        
+        
+    }
+    
     public static void main(String[] args) {
         BST tree = new BST(); // // criei minha arvore de busca, que a principio está vazia
         
         //inserindo na arvore
-        tree.insert(2);
-        tree.insert(1);
-        tree.insert(3);
+        tree.insert(37);
+        tree.insert(66);
+        tree.insert(42);
+        tree.insert(11);
+        tree.insert(72);
+        tree.insert(8);
+        tree.insert(17);
         
         tree.inOrder(); // imprimir em ordem, nesse caso, por ser uma arvore binaria de busca, será em ordem crescente
     }
