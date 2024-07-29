@@ -98,10 +98,14 @@ public class Tree { // Árvore
     }
     
     public void preOrder(){ // raiz - esquerda - direita
-        preOrder(root);
+        preOrder(root); // algoritmo recursivo - imprimindo a partir da raiz da arvore em questão
     }
     
-    private void preOrder(final Node root){ //método sovrescrito preOder
+    private void preOrder(final Node node){ //método sobrescrito preOder
+        // recebe de parametro um nó
+        // R - E - D
+        if(node == null) return; // se o nó for igual a 0, não farei nada, apenas retornará;
+        
         
     }
     
