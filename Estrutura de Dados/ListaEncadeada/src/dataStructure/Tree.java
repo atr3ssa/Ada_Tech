@@ -97,7 +97,11 @@ public class Tree { // Árvore
         }
     }
     
-    public void preOrder(){
+    public void preOrder(){ // raiz - esquerda - direita
+        preOrder(root);
+    }
+    
+    private void preOrder(final Node root){ //método sovrescrito preOder
         
     }
     
