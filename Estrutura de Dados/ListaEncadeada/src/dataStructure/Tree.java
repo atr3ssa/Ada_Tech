@@ -125,7 +125,7 @@ public class Tree { // Árvore
     }
     
     public void posOrder(){ // esquerda - direita - raiz
-        inOrder(root); // algoritmo recursivo - imprimindo a partir da raiz da arvore em questão
+        posOrder(root); // algoritmo recursivo - imprimindo a partir da raiz da arvore em questão
     }
     
     private void posOrder(final Node node){
