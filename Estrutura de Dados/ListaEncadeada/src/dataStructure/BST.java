@@ -33,6 +33,12 @@ public class BST { // Binary Search Tree
             // else
                 // contains(right, newItem
         // Remover item (delete)
+            // Remover folha (remove o nó folha da arvore e a raiz fica sem um lado)
+            // Nós Incompletos (se ele tiver filho de um dos lados, retiro ele e subo o filho
+            // Nó completo (tem filhos nos dois lados, 1°: copiar o menor valor das suas subarvores para aposição do nó que eu quero remover, sempre da sua subarvore direita, o nó mais a esquerda)
+                // 2°
+    
+    // crar uma versão não recursiva
     
     
     public Node root; // nó raiz
@@ -93,7 +99,7 @@ public class BST { // Binary Search Tree
         
     }
     
-     private boolean contains(final Node root, final int value) { // método recursivo parte 02
+     private boolean contains(final Node root, final int value) { // método recursivo parte 02 - Método de pesquisa
          if(root == null) return false; // se a raiz for nula, retono falso
          if(root.value == value) return true; // se o valor da raiz for igual ao valor, retorno verdadeiro
          if(value > root.value) return contains(root.right, value); // se o valor for maior que o valor da raiz, retorno contains( valor do nó da direita)
@@ -115,6 +121,10 @@ public class BST { // Binary Search Tree
         tree.insert(8);
         tree.insert(17);
         
+        System.out.println(tree.contains(11)); // se tiver o valor 11, retornará true, senão, false
+        System.out.println(tree.contains(99)); // se tiver o valor, retornará true, senão, false
+        
+        System.out.println("#########################"); 
         tree.inOrder(); // imprimir em ordem, nesse caso, por ser uma arvore binaria de busca, será em ordem crescente
     }
     
