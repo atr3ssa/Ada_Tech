@@ -41,12 +41,16 @@ public class Tree { // Árvore
     // INSERIR
     // É FOLHA? (isLeaf)
     // TRAVESSIA:
-        // PRÉ ORDEM : raiz* - esquerda - direita (1°)
+        // PRÉ ORDEM : raiz* - esquerda - direita (1°) IDENTICA A DFS
         // EM ORDEM : leitura normal esquerda - raiz* - direita (meio)
         // PÓS ORDEM : esquerda - direita - raiz* (último)
     // BUSCA
         // BUSCA EM LARGURA (BFS)
+            // busca por niveis da arvore - semelhante ao método inserir
+            // algoritmo de busca em largura;
         // BUSCA EM PROFUNDIDADE (DFS)
+            // começo pela raiz e sempre navego para a esquerda
+            // identica  a PRÉ ORDEM
     
     
     // OPERAÇÕES INICIALIZAR E INSERIR ITEM:
@@ -136,7 +140,22 @@ public class Tree { // Árvore
         posOrder(node.right); // lado direito do nó
         System.out.println(node.value); // imprimir o valor do nó
     }
-    
+    public void BFS(){ // esse método não é recursivo
+        if (root == null) return; // se minha raiz estiver vazia, não faço nada;
+        Queue<Node> queue = new LinkedList<>(); // senão, vou criar uma fila e add um nó raiz:
+        queue.add(root); // add na fila o nó raiz
+        while(!queue.isEmpty()) { 
+            Node node = queue.remove(); // desenfileirar - remover itens
+            if(node.left != null) queue.add(node.left); // se  o nó da esquerda for diferente de 0, vou add ele na fila
+            if(node.right != null) queue.add(node.right); // se o nó a direita for dferente de 0, vou add ele na fila
+            
+            System.out.println(node.value);
+            
+
+          
+        }
+        
+    }
     
     
     
@@ -158,6 +177,8 @@ public class Tree { // Árvore
         tree.inOrder();
         System.out.println("#######posOrder########");
         tree.posOrder();
+        System.out.println("#######BFS########");
+        tree.BFS();
         System.out.println("###############");
         
         
