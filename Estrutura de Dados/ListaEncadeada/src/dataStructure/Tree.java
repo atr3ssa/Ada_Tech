@@ -52,6 +52,11 @@ public class Tree { // Árvore
             // começo pela raiz e sempre navego para a esquerda
             // identica  a PRÉ ORDEM
     
+    // Estrutura dinâmica;
+    // Não linear;
+    // Armazenamento de informação;
+    // Múltiplos algoritmos de busca e travessia;
+    
     
     // OPERAÇÕES INICIALIZAR E INSERIR ITEM:
     
