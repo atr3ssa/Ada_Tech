@@ -36,12 +36,13 @@ public class BST { // Binary Search Tree
             // Remover folha (remove o nó folha da arvore e a raiz fica sem um lado)
             // Nós Incompletos (se ele tiver filho de um dos lados, retiro ele e subo o filho
             // Nó completo (tem filhos nos dois lados, 1°: copiar o menor valor das suas subarvores para aposição do nó que eu quero remover, sempre da sua subarvore direita, o nó mais a esquerda)
-                // 2°
+                // 2° depois que eu copiei e coloquei no lugar do nó anterior, eu apago ele
     
     // crar uma versão não recursiva
     
     
     public Node root; // nó raiz
+
  
     public class Node { // Classe nó
          public int value; // valores inteiros
@@ -103,11 +104,34 @@ public class BST { // Binary Search Tree
          if(root == null) return false; // se a raiz for nula, retono falso
          if(root.value == value) return true; // se o valor da raiz for igual ao valor, retorno verdadeiro
          if(value > root.value) return contains(root.right, value); // se o valor for maior que o valor da raiz, retorno contains( valor do nó da direita)
-         else return contains(root.left, value); // senão, retorno o valor do nó a esquerda da raiz
-        
-        
-        
+         else return contains(root.left, value); // senão, retorno o valor do nó a esquerda da raiz     
     }
+     
+     // Método remover
+     // implementar método utilitário: que vai retornar o menor valor dada a uma arvore, ou nó corrente
+     public int minValue(Node currentNode){ // fica no elemento mais a esquerda
+         while(currentNode.left != null){// enquanto o nó corrente a esquerda não for nulo, 
+            currentNode = currentNode.left; // eu vou navegar p o seu lado esquerdo, se ele não tiver subarvore a esquerda, então ele é o menor valor
+     }
+     
+     return currentNode.value; // vou retornar o valor do nó corrente
+}
+     public void deleteNode(int value){ // de forma recursiva
+         deleteNode(root, value); // método recursivo
+         
+     }
+     
+     private Node deleteNode(final Node root, final int value) {// método recursivo
+         // vai retornar a subarvore com o nó deletado
+         if(root == null) return null; // se o valor for nulo, retorno nulo
+         
+         if(value < root.value){// se o valor que eu quero deletar for menor que o da raiz, vou para o lado esquerdo
+        root.left = deleteNode(root.left, value); //o lado esquerdo vai aposntar p a subarvore depois que eu deletar aquele nó
+        // se o nó que eu vou deletar está do lado esquerdo de uma arvore, o lado esquerdo vai ser igual aquela arvores com o nó deletado
+        
+    } else if(value > root.value) {// senão, se o valor for maior que o valor que está nessa raiz, eu faço o inverso
+        root.right = deleteNode(root.left, value); // o lado direito = o nó deletado dessa arvore passando o valor
+    }}
     
     public static void main(String[] args) {
         BST tree = new BST(); // // criei minha arvore de busca, que a principio está vazia
