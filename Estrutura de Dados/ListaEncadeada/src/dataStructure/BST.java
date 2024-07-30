@@ -117,7 +117,7 @@ public class BST { // Binary Search Tree
      return currentNode.value; // vou retornar o valor do nó corrente
 }
      public void deleteNode(int value){ // de forma recursiva
-         deleteNode(root, value); // método recursivo
+         root = deleteNode(root, value); // método recursivo // o deletar nó é aquela arvore gerada pelo deletar nó, com o valor em cima do root, o valor original
          
      }
      
@@ -142,11 +142,11 @@ public class BST { // Binary Search Tree
                         int minValue = minValue(root.right);// pego o menor valor (sempre do lado da subarvore direita) do método anterior mplementado 
                         root.value = minValue; // copio p o valor corrente, o valor dessa raiz é igual a esse minValue
                         root.right = deleteNode(root.right,minValue);// o seu lado direito vai ser = ao ato de deletar o min value na subarvore direita
-                        return root; // e retorno a raiz
                     }
                         
                     }
-     
+                     return root; // e retorno a raiz
+     }
     
     public static void main(String[] args) {
         BST tree = new BST(); // // criei minha arvore de busca, que a principio está vazia
