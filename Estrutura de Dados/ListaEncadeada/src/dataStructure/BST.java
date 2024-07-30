@@ -135,7 +135,16 @@ public class BST { // Binary Search Tree
         if ((root.left == null) && (root.right == null)){// se esse nó for uma folha, se o lado esquerdo é nulo e o direito tmb
             return null; // eu vou retornar nulo
             } else if (root.left == null){ // se ele possui lado esquerdo igual a null
-                    return root = root.right; // esse nó raiz vai acabar se tornando o lado direito
+                    return root.right; // esse nó raiz vai acabar se tornando o lado direito / eu retorno o lado direito
+                    } else if (root.right == null){// senão, se o lado direito é nulo
+                        return root.left; // eu retorno o lado esquerdo
+                    } else { // quando o nó que eu quero apagar tem os dois lados
+                        int minValue = minValue(root.right);// pego o menor valor (sempre do lado da subarvore direita) do método anterior mplementado 
+                        root.value = minValue; // copio p o valor corrente, o valor dessa raiz é igual a esse minValue
+                        root.right = deleteNode(root.right,minValue);// o seu lado direito vai ser = ao ato de deletar o min value na subarvore direita
+                        return root; // e retorno a raiz
+                    }
+                        
                     }
      
     
