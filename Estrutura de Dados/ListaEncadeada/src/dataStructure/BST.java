@@ -135,7 +135,7 @@ public class BST { // Binary Search Tree
         if ((root.left == null) && (root.right == null)){// se esse nó for uma folha, se o lado esquerdo é nulo e o direito tmb
             return null; // eu vou retornar nulo
             } else if (root.left == null){ // se ele possui lado esquerdo igual a null
-                    root = root.right; // esse nó raiz vai acabar se tornando o lado direito
+                    return root = root.right; // esse nó raiz vai acabar se tornando o lado direito
                     }
      
     
