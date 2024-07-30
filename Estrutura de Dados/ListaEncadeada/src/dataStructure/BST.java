@@ -38,7 +38,10 @@ public class BST { // Binary Search Tree
             // Nó completo (tem filhos nos dois lados, 1°: copiar o menor valor das suas subarvores para aposição do nó que eu quero remover, sempre da sua subarvore direita, o nó mais a esquerda)
                 // 2° depois que eu copiei e coloquei no lugar do nó anterior, eu apago ele
     
-    // crar uma versão não recursiva
+    // criar uma versão não recursiva
+    // Estrutura dinâmica;
+    // Possuem regra de inserção;
+    // Utilizado para armazenamento, busca, ordenação de elementos
     
     
     public Node root; // nó raiz
