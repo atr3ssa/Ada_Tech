@@ -125,13 +125,19 @@ public class BST { // Binary Search Tree
          // vai retornar a subarvore com o nó deletado
          if(root == null) return null; // se o valor for nulo, retorno nulo
          
-         if(value < root.value){// se o valor que eu quero deletar for menor que o da raiz, vou para o lado esquerdo
-        root.left = deleteNode(root.left, value); //o lado esquerdo vai aposntar p a subarvore depois que eu deletar aquele nó
-        // se o nó que eu vou deletar está do lado esquerdo de uma arvore, o lado esquerdo vai ser igual aquela arvores com o nó deletado
+         if(value < root.value){// se o valor que eu quero deletar for menor que o da raiz, vou para o lado esquerdo:
+             root.left = deleteNode(root.left, value); //o lado esquerdo vai apontar p a subarvore, depois que eu deletar aquele nó
+        // se o nó que eu vou deletar está do lado esquerdo de uma arvore, o lado esquerdo vai ser igual aquela arvore com o nó deletado
         
     } else if(value > root.value) {// senão, se o valor for maior que o valor que está nessa raiz, eu faço o inverso
-        root.right = deleteNode(root.left, value); // o lado direito = o nó deletado dessa arvore passando o valor
-    }}
+        root.right = deleteNode(root.left, value); // o lado direito = o nó deletado do lado direito dessa arvore passando o valor
+    } else { // senão, se o valor n é menor ou maior, ou seja valor igual ao armazenado na raiz
+        if ((root.left == null) && (root.right == null)){// se esse nó for uma folha, se o lado esquerdo é nulo e o direito tmb
+            return null; // eu vou retornar nulo
+            } else if (root.left == null){ // se ele possui lado esquerdo igual a null
+                    root = root.right; // esse nó raiz vai acabar se tornando o lado direito
+                    }
+     
     
     public static void main(String[] args) {
         BST tree = new BST(); // // criei minha arvore de busca, que a principio está vazia
