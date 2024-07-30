@@ -130,7 +130,7 @@ public class BST { // Binary Search Tree
         // se o nó que eu vou deletar está do lado esquerdo de uma arvore, o lado esquerdo vai ser igual aquela arvore com o nó deletado
         
     } else if(value > root.value) {// senão, se o valor for maior que o valor que está nessa raiz, eu faço o inverso
-        root.right = deleteNode(root.left, value); // o lado direito = o nó deletado do lado direito dessa arvore passando o valor
+        root.right = deleteNode(root.right, value); // o lado direito = o nó deletado do lado direito dessa arvore passando o valor
     } else { // senão, se o valor n é menor ou maior, ou seja valor igual ao armazenado na raiz
         if ((root.left == null) && (root.right == null)){// se esse nó for uma folha, se o lado esquerdo é nulo e o direito tmb
             return null; // eu vou retornar nulo
@@ -164,7 +164,9 @@ public class BST { // Binary Search Tree
         System.out.println(tree.contains(99)); // se tiver o valor, retornará true, senão, false
         
         System.out.println("#########################"); 
+        tree.deleteNode(66); // deletar numero tal
         tree.inOrder(); // imprimir em ordem, nesse caso, por ser uma arvore binaria de busca, será em ordem crescente
+        
     }
     
 }
