@@ -1,6 +1,8 @@
 // pacote
 package problem;
 
+import java.util.Queue;
+
 
 public class Fila_Reversa {
     /* PROBLEMA: Revertendo os primeiros K elementos de uma fila
@@ -16,5 +18,21 @@ public class Fila_Reversa {
                 - desenfileirar
                 - enfileirar
     */
+    
+    public static Queue <Integer> reverseFirst(Queue<Integer> queue, int k){//retornar uma fila numérica, na solução chamada reverseFirst, 
+        //dos K primeiros elementos, que receberam como parametro a fila que será reordenada e o valor de K
+        
+        // resolução recursivo
+        
+        solveQueue(queue,k);// método resolver 
+    }
+
+    private static void solveQueue(Queue<Integer> queue, int k) { // método estático, lógica principal, 
+        if(k == 0) return; // se k for igual a 0, retorno nada
+        int element = queue.remove(); // vou pegar um elemento, vou desenfileirar da fila, chamar o método remover
+        solveQueue(queue, k-1);// mando resolver p k eleementos - 1
+        queue.add(element);// depois preciso add na fila o elemento que ficou de fora no final
+        
+    }
     
 }
