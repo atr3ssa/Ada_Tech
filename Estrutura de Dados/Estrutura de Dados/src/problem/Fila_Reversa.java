@@ -25,6 +25,8 @@ public class Fila_Reversa {
         // resolução recursivo
         
         solveQueue(queue,k);// método resolver 
+        int n = queue.size()-k; // calcular o restante (tamanho da fila)
+        // enquanto for maior que 0
     }
 
     private static void solveQueue(Queue<Integer> queue, int k) { // método estático, lógica principal, 
