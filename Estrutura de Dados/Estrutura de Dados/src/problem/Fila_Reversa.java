@@ -26,7 +26,10 @@ public class Fila_Reversa {
         
         solveQueue(queue,k);// método resolver 
         int n = queue.size()-k; // calcular o restante (tamanho da fila)
-        // enquanto for maior que 0
+        while(n-- > 0){// enquanto for maior que 0
+            int element = queue.remove();// ler da fila, retirar da fila e
+            queue.add(element);//reinserir na fila.
+        }
     }
 
     private static void solveQueue(Queue<Integer> queue, int k) { // método estático, lógica principal, 
