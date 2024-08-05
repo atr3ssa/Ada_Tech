@@ -39,5 +39,5 @@ public class Fila_Reversa {
         queue.add(element);// depois preciso add na fila o elemento que ficou de fora no final
         
     }
-    
+    // FALTA TESTAR
 }
