@@ -40,4 +40,13 @@ public class Fila_Reversa {
         
     }
     // FALTA TESTAR
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>(); // Fila<inteiros> fila = nova listaligada<>();
+
+// Criar uma fila de 5 elementos
+        queue.add(1);
+        queue.add(2);
+        
+        
+    }
 }
