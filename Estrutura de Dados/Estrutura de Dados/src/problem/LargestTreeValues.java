@@ -26,7 +26,25 @@ public class LargestTreeValues {
         // criar lista de retorno
         
         var list = new ArrayList<Integer>(); // variavel lista receberá um array de inteiros
+        // implementar o método preOrder (raiz - esquerda - direita)
+        solveTree(tree.root, 0, list); //método recursivo solve (raiz da arvore, nível , lista)
+        
         return list; // retornar lista
+    }
+// método
+    private static void solveTree(final Tree.Node node, // recebe um nó 
+                                  final int level, // recebe um nível 
+                                  final ArrayList<Integer> list) { // recebe a lista que vai ser preenchida
+        
+        if(node == null) return; // se o nó for nulo, ele retornará nada
+        
+        if(level == list.size()){ // se o nó nao for nulo, verificar se aquele nivel já foi avaliado
+            // se o nivel for  igual ao tamanho da lista
+            list.add(node.value); // add o valor do nó na lista
+            
+            
+        }
+        
     }
     
     
