@@ -1,6 +1,7 @@
 // pacote
 package problem;
 
+import java.util.LinkedList;
 import java.util.Queue;
 
 
@@ -51,7 +52,7 @@ public class Fila_Reversa {
         queue.add(4);
         queue.add(5);
         
-        System.out.println();
+        System.out.println(reverseFirst(queue, 3));
         
     }
 }
