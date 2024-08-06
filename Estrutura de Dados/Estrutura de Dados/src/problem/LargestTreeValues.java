@@ -40,10 +40,17 @@ public class LargestTreeValues {
         
         if(level == list.size()){ // se o nó nao for nulo, verificar se aquele nivel já foi avaliado
             // se o nivel for  igual ao tamanho da lista
-            list.add(node.value); // add o valor do nó na lista
-            
+            list.add(node.value); // add o valor do elemento na lista, nesse caso, o valor do nó      
+        }else { //senão, se já existia um elemento naquela posição
+            // Vou sobrescrever na posição
+            list.set(level, Math.max(list.get(level), node.value)); //setar na lista, naquele level(indice) o valor máximo, do elemento que ta
+            // armazenado naquela posição, com o valor que eu quero inserir
             
         }
+        
+        // chamar o método de forma recursiva
+        solveTree(node.left, level+1, list); //chamar o método para caminhar para o lado esquerdo, quando desço mais um nível, o level é incrementado, além disso, envio a lista
+        solveTree(node.right, level+1, list); // O mesmo, mas agora caminho para o lado direito
         
     }
     
