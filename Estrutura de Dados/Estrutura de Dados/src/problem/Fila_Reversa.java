@@ -52,7 +52,7 @@ public class Fila_Reversa {
         queue.add(4);
         queue.add(5);
         
-        System.out.println(reverseFirst(queue, 3));
+        System.out.println(reverseFirst(queue, 2));
         
     }
 }
