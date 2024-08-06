@@ -1,6 +1,10 @@
 // pacote
 package problem;
 
+import dataStructure.Tree;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class LargestTreeValues {
     
@@ -18,6 +22,12 @@ public class LargestTreeValues {
     precisa ter uma árvore binária aplicada. como já tem uma no file Tree, então ta ok
     */
     
+    public static List<Integer> largestValues(Tree tree){
+        // criar lista de retorno
+        
+        var list = new ArrayList<Integer>(); // variavel lista receberá um array de inteiros
+        return list; // retornar lista
+    }
     
     
 }
