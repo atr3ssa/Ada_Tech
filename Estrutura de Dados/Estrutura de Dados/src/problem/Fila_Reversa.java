@@ -30,6 +30,7 @@ public class Fila_Reversa {
             int element = queue.remove();// ler da fila, retirar da fila e
             queue.add(element);//reinserir na fila.
         }
+        return queue; // retornar o resultado da fila manipulada
     }
 
     private static void solveQueue(Queue<Integer> queue, int k) { // método estático, lógica principal, 
@@ -46,7 +47,11 @@ public class Fila_Reversa {
 // Criar uma fila de 5 elementos
         queue.add(1);
         queue.add(2);
+        queue.add(3);
+        queue.add(4);
+        queue.add(5);
         
+        System.out.println();
         
     }
 }
