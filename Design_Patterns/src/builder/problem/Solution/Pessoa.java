@@ -2,6 +2,9 @@
 package builder.problem.Solution;
 
 // Classe pessoa com os atributos: Nome, sobrenome, documento, email, apelido, data de nascimento
+
+import java.time.LocalDate;
+
 public class Pessoa { 
     // uma estrutura da qual posso criar objetos concretos
             //  Uma classe é uma planta e as casas criadas a partir dessa planta, são os objetos (criados a partir dos construtores
@@ -12,7 +15,7 @@ public class Pessoa {
    private String documento;
    private String email;
    private String apelido;
-   private String dataNascimento; // poderia ser um localDate
+   private LocalDate dataNascimento; // poderia ser um localDate
 
    // Inserir constructor
    
@@ -20,7 +23,7 @@ public class Pessoa {
             // public Pessoa(){ padrão
    
             // )
-    public Pessoa(String nome, String sobrenome, String documento, String email, String apelido, String dataNascimento) {
+    public Pessoa(String nome, String sobrenome, String documento, String email, String apelido, LocalDate dataNascimento) {
         // Quando for criado uma pessoa, terei que passar todos esses atributos
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -73,11 +76,11 @@ public class Pessoa {
         this.apelido = apelido;
     }
 
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setLocalDate(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
     

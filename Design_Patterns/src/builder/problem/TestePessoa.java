@@ -7,6 +7,7 @@ package builder.problem;
 
 
 import builder.problem.Solution.Pessoa;
+import java.time.LocalDate;
 
 public class TestePessoa {
     public static void main(String[] args) { // método main
@@ -17,7 +18,7 @@ public class TestePessoa {
                 "823213904", // documento
                 "andressa.rabelo@ada.com.br", // email
                 "Dessa", // apelido
-                "06/03/2001"); // dataNascimento
+                LocalDate.of(2001,03,06)); // dataNascimento
         
         System.out.println(pessoa); // imprimir pessoa
                 
