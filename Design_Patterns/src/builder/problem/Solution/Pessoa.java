@@ -16,6 +16,10 @@ public class Pessoa {
 
    // Inserir constructor
    
+        // A partir do momento que eu crio um constructor de classe, eu perco o constructor padrão
+            // public Pessoa(){ padrão
+   
+            // )
     public Pessoa(String nome, String sobrenome, String documento, String email, String apelido, String dataNascimento) {
         // Quando for criado uma pessoa, terei que passar todos esses atributos
         this.nome = nome;
