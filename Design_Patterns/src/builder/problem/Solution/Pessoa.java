@@ -12,7 +12,7 @@ public class Pessoa {
    private String documento;
    private String email;
    private String apelido;
-   private String dataNascimento; // poderia ser um local date
+   private String dataNascimento; // poderia ser um localDate
 
    // Inserir constructor
    
