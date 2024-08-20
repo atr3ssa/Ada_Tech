@@ -77,6 +77,19 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
     
+    //toString
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + 
+                "nome=" + nome +
+                ", sobrenome=" + sobrenome + 
+                ", documento=" + documento + 
+                ", email=" + email + 
+                ", apelido=" + apelido + 
+                ", dataNascimento=" + dataNascimento + '}';
+    }
+    
    
    
 }
