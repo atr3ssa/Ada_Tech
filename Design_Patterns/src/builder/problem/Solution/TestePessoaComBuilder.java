@@ -1,6 +1,8 @@
 // pacote
 package builder.problem.Solution;
 
+import java.time.LocalDate;
+
 
 public class TestePessoaComBuilder {
     public static void main(String[] args) { // atalho main
@@ -10,7 +12,7 @@ public class TestePessoaComBuilder {
                 .apelido("Dressa")
                 .documento("823213904")
                 .email("andressa.lindinha@gmail.com")
-                .dataNascimento(2001,03,06);
+                .dataNascimento(LocalDate.of(2001,03,06)); // método distatico
           
                 
     }

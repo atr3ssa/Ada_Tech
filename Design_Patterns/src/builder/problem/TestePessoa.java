@@ -20,7 +20,7 @@ public class TestePessoa {
                 "823213904", // documento
                 "andressa.rabelo@ada.com.br", // email
                 "Dessa", // apelido
-                LocalDate.of(2001,03,06)); // dataNascimento
+                LocalDate.of(2001,03,06)); // dataNascimento // método distatico
         
         System.out.println(pessoa); // imprimir pessoa
                 
