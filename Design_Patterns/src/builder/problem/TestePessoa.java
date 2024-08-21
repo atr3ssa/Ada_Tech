@@ -2,9 +2,10 @@
 package builder.problem;
 
 // CREATIONAL   
-// problema a ser solucionado: Estou preso a ordem em que o constructor foi criada, Eu não sei se é nome, sobrenome...
+// problema a ser solucionado: Estou preso a ordem em que o constructor foi criada, Eu não sei se é nome, sobrenome... Pos não aparece p mim
 // preciso ficar indo ver o constructor p ver quais são, isso pq é apenas uma pessoa, pois se fossem várias, o código ficaria com informações bagunçadas
 
+// Nessa situação, entra o buider
 
 import builder.problem.Solution.Pessoa;
 import java.time.LocalDate;
