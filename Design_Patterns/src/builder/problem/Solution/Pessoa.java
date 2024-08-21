@@ -146,7 +146,7 @@ public class Pessoa {
    
     // método publico
     
-    public Pessoa criaPessoa(){
+    public Pessoa build(){ // criaPessoa = build
       return new Pessoa(nome, sobrenome, documento, email, apelido, dataNascimento); // passar os atributos necessários 
        
     }   

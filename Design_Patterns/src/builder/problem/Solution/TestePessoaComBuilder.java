@@ -21,11 +21,18 @@ public class TestePessoaComBuilder {
                 .documento("823213904")
                 .email("andressa.lindinha@gmail.com")
                 .dataNascimento(LocalDate.of(2001,03,06)) // método distatico
-                .criaPessoa(); // último método que criei (criar pessoa)
+                .build(); // último método que criei (criar pessoa)
         
       // alt + ENTER (escolha a opção  
       
         System.out.println(pessoa); // imprimir a pessoa na tela (dados e valores sobre ela)
+        
+        // Classe que usa builder:
+        
+        StringBuilder sb = new StringBuilder().append("palavra 01 ").append("palavra 02");
+        // permite que trabalhamenos dentro de uma só String
+        
+        System.out.println(sb); // imprimir objeto sb
         
         // --------------------------------------------
         // Segunda pessoa, essa sem buider (ambas funcionam juntas, desde que estejam publicas, caso 1 esteja privada, nada na classe poderá ser mexida fora da classe) 
@@ -46,6 +53,7 @@ public class TestePessoaComBuilder {
         
         // VANTAGEM: Agora eu sei exatamente qual atrbuto eu estou me referindo
             // ganho independencia de ordem de montagem (flexibilidade, independente da ordem)
+            // dei ao builder toda responsabilidade exclusiva de criar o objeto
         
           
                 
