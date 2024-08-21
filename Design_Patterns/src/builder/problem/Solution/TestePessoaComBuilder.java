@@ -6,6 +6,9 @@ import java.time.LocalDate;
 
 public class TestePessoaComBuilder {
     public static void main(String[] args) { // atalho main
+        
+        // COM BUIDER:
+        
         Pessoa pessoa = // mudei para Pessoa pessoa ( criar pessoa)
                 new PessoaBuilder()
                 // Comecei a chamar os métodos
@@ -23,9 +26,26 @@ public class TestePessoaComBuilder {
       // alt + ENTER (escolha a opção  
       
         System.out.println(pessoa); // imprimir a pessoa na tela (dados e valores sobre ela)
+        
+        // --------------------------------------------
+        // Segunda pessoa, essa sem buider (ambas funcionam juntas, desde que estejam publicas, caso 1 esteja privada, nada na classe poderá ser mexida fora da classe) 
+        // COM CONSTRUCTOR
+                // Solução, caso esteja como privada (por o buider dentro da classe privada, no caso Pessoa
       
+         Pessoa pessoa2 = new Pessoa("Andressa", //nome
+                "Rabêlo", // sobrenome
+                "823213904", // documento
+                "andressa.rabelo@ada.com.br", // email
+                "Dessa", // apelido
+                LocalDate.of(2001,03,06)); // dataNascimento // método distatico
+        
+        System.out.println(pessoa2); // imprimir pessoa
+        
+        
+        
         
         // VANTAGEM: Agora eu sei exatamente qual atrbuto eu estou me referindo
+            // ganho independencia de ordem de montagem (flexibilidade, independente da ordem)
         
           
                 
