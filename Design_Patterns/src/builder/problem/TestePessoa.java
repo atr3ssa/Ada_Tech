@@ -6,6 +6,7 @@ package builder.problem;
 // preciso ficar indo ver o constructor p ver quais são, isso pq é apenas uma pessoa, pois se fossem várias, o código ficaria com informações bagunçadas
 
 // Nessa situação, entra o buider
+    // p legebilidade de código e flexibilidade na construção de um objeto
 
 import builder.problem.Solution.Pessoa;
 import java.time.LocalDate;
