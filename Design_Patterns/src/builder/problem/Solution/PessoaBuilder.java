@@ -15,4 +15,40 @@ public class PessoaBuilder {
    private String email;
    private String apelido;
    private LocalDate dataNascimento; // poderia ser um localDate
+   
+   // SETTERS - métodos
+        // Após criar os setters, vou mudar o nome dos métodos p o mesmo nome dos atributos:
+
+    public PessoaBuilder nome(String nome) {  // O nome vai retornar PessoaBuilder(O nome da classe)
+        this.nome = nome;
+        return this; // retornar o próprio objeto ( o próprio builder)
+    }
+
+    public PessoaBuilder sobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+        return this;
+    }
+
+    public PessoaBuilder documento(String documento) {
+        this.documento = documento;
+        return this;
+    }
+
+    public PessoaBuilder email(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public PessoaBuilder apelido(String apelido) {
+        this.apelido = apelido;
+        return this;
+    }
+
+    public PessoaBuilder dataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+        return this;
+    }
+   
+   
+   
 }
