@@ -21,7 +21,7 @@ public class PessoaBuilder {
 
     public PessoaBuilder nome(String nome) {  // O nome vai retornar PessoaBuilder(O nome da classe)
         this.nome = nome;
-        return this; // retornar o próprio objeto ( o próprio builder)
+        return this; // retornar o próprio objeto ( o próprio builder (PessoaBuilder))
     }
 
     public PessoaBuilder sobrenome(String sobrenome) {
@@ -49,6 +49,12 @@ public class PessoaBuilder {
         return this;
     }
    
+    // método publico
+    
+    public Pessoa criaPessoa(){
+      return new Pessoa(nome, sobrenome, documento, email, apelido, dataNascimento); // passar os atributos necessários 
+       
+    }
    
    
 }
