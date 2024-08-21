@@ -149,7 +149,5 @@ public class Pessoa {
     public Pessoa criaPessoa(){
       return new Pessoa(nome, sobrenome, documento, email, apelido, dataNascimento); // passar os atributos necessários 
        
-    }
-   
-   
-}
+    }   
+}}

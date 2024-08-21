@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class TestePessoa {
     public static void main(String[] args) { // método main
         // como estou usando um constructor de classe, preciso passar os valores
-        
+        /*
         Pessoa pessoa = new Pessoa("Andressa", //nome
                 "Rabêlo", // sobrenome
                 "823213904", // documento
@@ -23,7 +23,7 @@ public class TestePessoa {
                 LocalDate.of(2001,03,06)); // dataNascimento // método distatico
         
         System.out.println(pessoa); // imprimir pessoa
-                
+                */
     }
   
     

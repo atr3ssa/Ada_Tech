@@ -10,7 +10,7 @@ public class TestePessoaComBuilder {
         // COM BUIDER:
         
         Pessoa pessoa = // mudei para Pessoa pessoa ( criar pessoa)
-                new PessoaBuilder()
+                new Pessoa.PessoaBuilder() // coloquei um Pessoa.
                 // Comecei a chamar os métodos
                 // Consigo chamar um objeto depois do outro, pois como ele retorna o próprio objeto (PessoaBuilder)
                 // Então, eu chamo e ele retorna, pula p o outro, chama e retorna... se chama: FLUÊNCIA DE MÉTODO
@@ -31,7 +31,7 @@ public class TestePessoaComBuilder {
         // Segunda pessoa, essa sem buider (ambas funcionam juntas, desde que estejam publicas, caso 1 esteja privada, nada na classe poderá ser mexida fora da classe) 
         // COM CONSTRUCTOR
                 // Solução, caso esteja como privada (por o buider dentro da classe privada, no caso Pessoa
-      
+      /*
          Pessoa pessoa2 = new Pessoa("Andressa", //nome
                 "Rabêlo", // sobrenome
                 "823213904", // documento
@@ -40,7 +40,7 @@ public class TestePessoaComBuilder {
                 LocalDate.of(2001,03,06)); // dataNascimento // método distatico
         
         System.out.println(pessoa2); // imprimir pessoa
-        
+        */
         
         
         
