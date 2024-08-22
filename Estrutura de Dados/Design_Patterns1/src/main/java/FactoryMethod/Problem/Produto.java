@@ -2,7 +2,13 @@
 package FactoryMethod.Problem;
 
 import java.math.BigDecimal;
+/*
+import lombok.*;// devido a escrita recorrente de alguns códigos, ele fornece alguns já prontos
 
+@Data // Getters e setters + to string
+@AllArgsConstructor // um constructor com todos os argumentos
+@NoArgsConstructor // retorna um constructor vazio
+@Builder // dá um builder completo p gente preencher */
 
 public class Produto {
     
