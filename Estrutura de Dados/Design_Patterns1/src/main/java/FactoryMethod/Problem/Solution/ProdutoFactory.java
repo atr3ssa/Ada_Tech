@@ -11,6 +11,7 @@ import FactoryMethod.Problem.TipoDeProdutoEnum;
 
 public class ProdutoFactory {
     
+    // responsável por fornecer uma instância
     public static Produto getInstance(TipoDeProdutoEnum tipoDeProdutoEnum){ // recebo como parametro
         
         switch(tipoDeProdutoEnum){ // Usando o Switchcase - Caso o tipo de produto seja
@@ -25,7 +26,8 @@ public class ProdutoFactory {
                 produtoDigital.setPossuiDimensoesFisicas(false); // informar que ele terá dimensões fisicas
                 return produtoDigital; // retornar o produto
                 
-            default:
+            default: // retornar uma excessão
+                throw new IllegalArgumentException("Tipo de produto indisponível!"); // Uma exceção do java para dizer que aquele argumento é ilegal
                 
                 
         }
