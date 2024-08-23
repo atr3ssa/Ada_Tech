@@ -8,7 +8,7 @@ package FactoryMethod.Problem;
 
 // solução 2:
        //(p/ quando não pode alterar a modelagem (ex: quando tem banco de dados envolvido, ou é um projeto criado por outra pessoa)
-       // FACTORY METHOD 
+       // FACTORY METHOD (encapsular regras de negócio)
             // preciso que toda vez que for criado um produto fisico, seja setado automaticamente, se ele possui ou não dimensões
 public class TesteProduto {
     public static void main(String[] args) {
