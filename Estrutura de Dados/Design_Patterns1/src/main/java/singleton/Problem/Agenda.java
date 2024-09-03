@@ -9,4 +9,9 @@ public class Agenda {
     // hashmap de String
     
     private Map<String, Boolean> diasDisponiveis = new HashMap<>();
+    
+    public Agenda(){
+        diasDisponiveis.put("Domingo", Boolean.TRUE);
+        
+    }
 }
