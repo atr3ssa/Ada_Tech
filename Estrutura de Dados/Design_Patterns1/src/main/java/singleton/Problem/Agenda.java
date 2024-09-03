@@ -16,7 +16,11 @@ public class Agenda {
         diasDisponiveis.put("Domingo", Boolean.TRUE);
         
     }
-    public Map<String, Boolean> diasDisponiveis(){return diasDisponiveis;}
+    public Map<String, Boolean> diasDisponiveis() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
     
-    public void ocupa(String dia){ diasDisponiveis.replace(dia, Boolean.FALSE);}
+    // caso, alguém chame p algo:
+    public void ocupa(String dia){ // recebe uma String
+        // Se eu receber ex: "Segunda", ele vai dizer que está falso (indisponível)
+        
+        diasDisponiveis.replace(dia, Boolean.FALSE);} // método ocupa
 }
