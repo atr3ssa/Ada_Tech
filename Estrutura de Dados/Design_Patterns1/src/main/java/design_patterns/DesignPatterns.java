@@ -2,7 +2,7 @@
 package design_patterns;
 
 
-public class DesignPatterns {
+public class DesignPatterns { // PADRÃO DE PROJETOS
    /*
     Design patterns:
  Padrões utilizados para solucionar um problema
