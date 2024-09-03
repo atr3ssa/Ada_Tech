@@ -23,4 +23,6 @@ public class Agenda {
         // Se eu receber ex: "Segunda", ele vai dizer que está falso (indisponível)
         
         diasDisponiveis.replace(dia, Boolean.FALSE);} // método ocupa
+    
+    // Continuar minuto: 02:30
 }
