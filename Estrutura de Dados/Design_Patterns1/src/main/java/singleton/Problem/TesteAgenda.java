@@ -4,6 +4,10 @@ package singleton.Problem;
 
 public class TesteAgenda {
     
+    public static void main(String[] args) {
+        reservaDia("Segunda");
+    }
+    
     //método p reservar dias
     public static void reservaDia(String dia){ //passei dia como parametro
         
