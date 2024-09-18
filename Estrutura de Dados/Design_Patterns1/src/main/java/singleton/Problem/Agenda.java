@@ -16,7 +16,7 @@ public class Agenda {
         diasDisponiveis.put("Domingo", Boolean.TRUE);
         
     }
-    public Map<String, Boolean> diasDisponiveis() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
+    public Map<String, Boolean> getDias() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
     
     // caso, alguém chame p algo:
     public void ocupa(String dia){ // recebe uma String
