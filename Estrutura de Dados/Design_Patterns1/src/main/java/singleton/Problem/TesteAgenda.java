@@ -10,7 +10,7 @@ public class TesteAgenda {
         Agenda agenda = new Agenda(); //criar uma agenda: (um objeto)
         
         agenda.ocupa(dia);//reservar o dia
-        System.out.println(agenda); // imprimir minha agenda
+        System.out.println(agenda.diasDisponiveis()); // imprimir minha agenda
         
     }
     
