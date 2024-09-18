@@ -20,4 +20,9 @@ public class TesteAgenda {
         
     }
     
+    // PROBLEMA: Sempre que eu chamo o método agenda, ele cria uma nova agenda. Logo, nõa consigo deixar masi de um dia ocupado na minha 
+    // agenda, pois é sempre criado uma nova instância que herda as infos de agenda ( q traz todos os dias já como true);
+    
+    // SOLUÇÃO: Criar um Singleton, que será uma única instância que apenas será atualizada com as informações;
+    
 }
