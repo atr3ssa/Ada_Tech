@@ -1,16 +1,16 @@
 // pacote
-package singleton.Problem;
+package singleton.Problem.Solution;
 
 import java.util.HashMap; // import hashMap
 import java.util.Map; // Map
 
 
-public class Agenda {
+public class AgendaSingletonEAGER {
     // hashmap de String
     
     private Map<String, Boolean> diasDisponiveis = new HashMap<>(); // HashMap de String e boolean
     
-    public Agenda(){ // Construtor
+    public AgendaSingletonEAGER(){ // Construtor
         
         // mostro os dias disponiveis
         diasDisponiveis.put("Domingo", Boolean.TRUE);
@@ -31,5 +31,5 @@ public class Agenda {
         
         diasDisponiveis.replace(dia, Boolean.FALSE);} // método ocupa
     
-    // Continuar minuto: 08:55
+    // Continuar minuto: 02:30
 }
