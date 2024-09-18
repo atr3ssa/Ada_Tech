@@ -6,6 +6,8 @@ public class TesteAgenda {
     
     public static void main(String[] args) {
         reservaDia("Segunda");
+        reservaDia("Sabado");
+        reservaDia("Domingo");
     }
     
     //método p reservar dias
