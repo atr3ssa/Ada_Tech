@@ -14,6 +14,13 @@ public class Agenda {
         
         // mostro os dias disponiveis
         diasDisponiveis.put("Domingo", Boolean.TRUE);
+        diasDisponiveis.put("Segunda", Boolean.TRUE);
+        diasDisponiveis.put("Terça", Boolean.TRUE);
+        diasDisponiveis.put("Quarta", Boolean.TRUE);
+        diasDisponiveis.put("Quinta", Boolean.TRUE);
+        diasDisponiveis.put("Sexta", Boolean.TRUE);
+        diasDisponiveis.put("Sabado", Boolean.TRUE);
+        
         
     }
     public Map<String, Boolean> getDias() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
