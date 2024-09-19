@@ -3,6 +3,7 @@ package singleton.Problem.Solution;
 
 import java.util.HashMap; // import hashMap
 import java.util.Map; // Map
+import java.util.Objects;
 
 
 public class AgendaSingletonLAZY {
@@ -10,7 +11,7 @@ public class AgendaSingletonLAZY {
     
     // Criar um atributo com o mesmo nome da classe (estatico e final)
     
-    private static  final AgendaSingletonLAZY Instance = new AgendaSingletonLAZY();/* 
+    private static AgendaSingletonLAZY Instance = null;/* 
     
     static = significa que terá só uma instância / uma única
     final = n vai poder ser modificado e por ser final, logo na criação, tem que dar um = new Agenda...();*/
@@ -33,7 +34,13 @@ public class AgendaSingletonLAZY {
     
     //P/ obter a instancia (AgendaSingletonEAGER), criar método:
     public static AgendaSingletonLAZY getInstance(){
-        return Instance; //retornar nstancia
+        
+        if(Objects.isNull(Instance)){// IF, vai verificar se essa instancia é nula
+            // Se for nula, ele vai:
+            Instance = new AgendaSingletonLAZY();
+            return Instance; //retornar nstancia
+        } // SENÃO:
+        return Instance;
     }
     
     public Map<String, Boolean> getDias() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
