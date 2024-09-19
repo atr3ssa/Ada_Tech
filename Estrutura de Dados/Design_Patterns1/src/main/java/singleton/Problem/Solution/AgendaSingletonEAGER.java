@@ -52,5 +52,5 @@ public class AgendaSingletonEAGER {
         
         diasDisponiveis.replace(dia, Boolean.FALSE);} // método ocupa
     
-    // Continuar minuto: 02:30
+    
 }
