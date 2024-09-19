@@ -24,7 +24,8 @@ public class AgendaSingletonEAGER {
     
     private Map<String, Boolean> diasDisponiveis = new HashMap<>(); // HashMap de String e boolean
     
-    public AgendaSingletonEAGER(){ // Construtor
+    private AgendaSingletonEAGER(){ // // Construtor privado p proteger o código. Pos quero que tenha só uma instancia e com ele  público
+        // eu ainda consigo criar novas instancias, por isso, deixar privado
         
         // mostro os dias disponiveis
         diasDisponiveis.put("Domingo", Boolean.TRUE);
