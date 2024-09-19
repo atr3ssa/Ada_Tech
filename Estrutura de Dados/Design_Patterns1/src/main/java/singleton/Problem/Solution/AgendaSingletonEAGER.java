@@ -9,7 +9,8 @@ public class AgendaSingletonEAGER {
     // hashmap de String
     
     // Criar um atributo com o mesmo nome da classe (estatico e final)
-    private static final AgendaSingletonEAGER Instance = new AgendaSingletonEAGER();
+    private static /* static = significa que terá só uma instância / uma única*/ final /* n vai poder ser modificado */ 
+            AgendaSingletonEAGER Instance = new AgendaSingletonEAGER(); // por ser final, logo na criação, tem que dar um = new...
     
     private Map<String, Boolean> diasDisponiveis = new HashMap<>(); // HashMap de String e boolean
     
@@ -29,7 +30,7 @@ public class AgendaSingletonEAGER {
     
     //P/ obter a instancia (AgendaSingletonEAGER), criar método:
     public static AgendaSingletonEAGER getInstance(){
-        return Instance;
+        return Instance; //retornar nstancia
     }
     
     public Map<String, Boolean> getDias() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
