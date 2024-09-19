@@ -8,6 +8,9 @@ import java.util.Map; // Map
 public class AgendaSingletonEAGER {
     // hashmap de String
     
+    // Criar um atributo com o mesmo nome da classe (estatico e final)
+    private static final AgendaSingletonEAGER Instance = new AgendaSingletonEAGER();
+    
     private Map<String, Boolean> diasDisponiveis = new HashMap<>(); // HashMap de String e boolean
     
     public AgendaSingletonEAGER(){ // Construtor
