@@ -26,6 +26,12 @@ public class AgendaSingletonEAGER {
         
         
     }
+    
+    //P/ obter a instancia (AgendaSingletonEAGER), criar método:
+    public static AgendaSingletonEAGER getInstance(){
+        return Instance;
+    }
+    
     public Map<String, Boolean> getDias() /*Método */{return diasDisponiveis;} // retorna todos os dias dísponiveis
     
     // caso, alguém chame p algo:
