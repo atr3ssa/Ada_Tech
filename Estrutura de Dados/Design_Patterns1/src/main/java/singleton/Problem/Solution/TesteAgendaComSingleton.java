@@ -26,7 +26,7 @@ public class TesteAgendaComSingleton {
     // agenda, pois é sempre criado uma nova instância que herda as infos de agenda ( q traz todos os dias já como true);
     
     // SOLUÇÃO: Criar um Singleton, que será uma única instância na memória que apenas será atualizada com as informações;
-    // SINGLETON: 3 formas: EAGER, 
+    // SINGLETON: 3 formas: EAGER (O java já nicializa como objeto), 
 
     
 }
