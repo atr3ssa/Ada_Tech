@@ -7,15 +7,15 @@ import singleton.Problem.*;
 public class TesteAgendaComSingleton {
     
     public static void main(String[] args) {
-        reservaDia("Segunda");
-        reservaDia("Sabado");
-        reservaDia("Domingo");
+        reservaDiaEAGER("Segunda");
+        reservaDiaEAGER("Sabado");
+        reservaDiaEAGER("Domingo");
     }
     
     //método p reservar dias
-    public static void reservaDia(String dia){ //passei dia como parametro
-        
-        Agenda agenda = new Agenda(); //criar uma agenda: (um objeto)
+    public static void reservaDiaEAGER(String dia){ //passei dia como parametro
+        AgendaSingletonEAGER agenda = AgendaSingletonEAGER.getInstance(); //criar uma agenda: (um objeto)
+        // Alt + ENTER
         
         agenda.ocupa(dia);//reservar o dia
         System.out.println(agenda.getDias()); // imprimir minha agenda
