@@ -4,6 +4,13 @@ package singleton.Problem.Solution;
 import java.util.HashMap; // import hashMap
 import java.util.Map; // Map
 
+/*
+EAGER:
+    - Carrega a classe com a instancia junto
+    - Mesmo que eu n utilize a instancia ele ainda vai instanciar, ela estará lá. Ocupa memória mesmo sem precisar
+
+*/
+
 
 public class AgendaSingletonEAGER {
     // hashmap de String

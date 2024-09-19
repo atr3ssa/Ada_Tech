@@ -5,6 +5,15 @@ import java.util.HashMap; // import hashMap
 import java.util.Map; // Map
 import java.util.Objects;
 
+/*
+LAZY:
+    - Quando dou um getInstance, ele vai verificar se a instancia está nula, se estiver nula, ele retorna
+    - No IF;
+    - Carrego a instancia sob demanda
+    - util p ter uma instancia só quando eu for utiliza-la
+    - Ocupa menos memória
+
+*/
 
 public class AgendaSingletonLAZY {
     // hashmap de String
