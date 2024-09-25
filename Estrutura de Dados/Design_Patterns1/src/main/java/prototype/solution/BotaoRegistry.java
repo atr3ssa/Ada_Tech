@@ -2,6 +2,6 @@
 package prototype.solution;
 
 
-public class BotaoRegistry {
+public class BotaoRegistry { // aplicar Singleton
     
 }
