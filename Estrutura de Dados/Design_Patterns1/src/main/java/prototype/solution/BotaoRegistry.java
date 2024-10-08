@@ -9,7 +9,7 @@ import prototype.TipoBordaEnum;
 
 public class BotaoRegistry { // aplicar Singleton
     
-    private static BotaoRegistry botaoRegistry;
+    // private static BotaoRegistry botaoRegistry;
     
     //criar um Map
     private static Map<String, Botao> REGISTRY = new HashMap<>(); // Map, o cara que vai registrar o nosso protótipo
@@ -48,13 +48,13 @@ public class BotaoRegistry { // aplicar Singleton
         REGISTRY.put("BOTAO_AZUL", botaoAzul);
     }
     
-    public static BotaoRegistry getInstance(){ // método getInstance p pegar uma instância do meu botão Registry
+   /* public static BotaoRegistry getInstance(){ // método getInstance p pegar uma instância do meu botão Registry
       if(Objects.isNull(botaoRegistry))  {
           botaoRegistry = new BotaoRegistry();
           return botaoRegistry;
       }
       return botaoRegistry;
-    }
+    } */
     // A partir da inicialização da Classe:
     
     //método para pegar o botão (getBotão):
@@ -62,5 +62,10 @@ public class BotaoRegistry { // aplicar Singleton
         
         return BotaoFactory.getInstance(REGISTRY.get(chave)); // retorna
     }
+
+    static void addRegistry(String chave, Botao botaoPreto) {
+        
+        REGISTRY.put(chave, botaoPreto);
+            }
     
 }
