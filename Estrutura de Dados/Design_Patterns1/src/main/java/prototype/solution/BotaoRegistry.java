@@ -24,6 +24,12 @@ public class BotaoRegistry { // aplicar Singleton
                 botao_amarelo.setTipoBorda(TipoBordaEnum.TRACEJADA);
                 
         Botao botao_vermelho = new Botao();
+            // atributos:
+                botao_vermelho.setCor("Vermelho");
+                botao_vermelho.setAltura(30);
+                botao_vermelho.setLargura(160);
+                botao_vermelho.setTipoBorda(TipoBordaEnum.FINA);
+                
         Botao botao_azul = new Botao();
             // atributos:
                 botao_azul.setCor("azul");
