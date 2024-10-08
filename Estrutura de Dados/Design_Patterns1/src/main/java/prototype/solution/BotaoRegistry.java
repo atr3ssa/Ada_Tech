@@ -14,7 +14,8 @@ public class BotaoRegistry { // aplicar Singleton
     //criar um Map
     private static Map<String, Botao> REGISTRY = new HashMap<>(); // Map, o cara que vai registrar o nosso protótipo
     
-    static {
+    static {//bloco estatico
+        
         // criar os botões e inicializar:
         Botao botao_amarelo = new Botao();
             // atributos:
@@ -37,13 +38,17 @@ public class BotaoRegistry { // aplicar Singleton
                 botao_azul.setAltura(125);
                 botao_azul.setTipoBorda(TipoBordaEnum.TRACEJADA);
         
-        // add botões:
+        /* add botões (Registrador de botões):
+                Se eu passar uma chave (ex: do botão amarelo) o registrador vai devolver uma instância ( do botão amarelo)
+                
+                */
+        
         REGISTRY.put("BOTAO_AMARELO", botao_amarelo);
         REGISTRY.put("BOTAO_VERMELHO", botao_vermelho);
         REGISTRY.put("BOTAO_AZUL", botao_azul);
-    }//bloco estatico
+    }
     
-    public static BotaoRegistry getInstance(){
+    public static BotaoRegistry getInstance(){ // método getInstance p pegar uma instância do meu botão Registry
       if(Objects.isNull(botaoRegistry))  {
           botaoRegistry = new BotaoRegistry();
           return botaoRegistry;
@@ -51,5 +56,11 @@ public class BotaoRegistry { // aplicar Singleton
       return botaoRegistry;
     }
     // A partir da inicialização da Classe:
+    
+    //método para pegar o botão (getBotão):
+    public static Botao getBotao(String chave){//passa a chave p gente, lá no REGISTRY eu vou pegar o prototipo que eu quero e passar p a minha factory getInstance
+        
+        return BotaoFactory.getInstance(REGISTRY.get(chave)); // retorna
+    }
     
 }
