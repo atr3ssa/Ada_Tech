@@ -17,35 +17,35 @@ public class BotaoRegistry { // aplicar Singleton
     static {//bloco estatico
         
         // criar os botões e inicializar:
-        Botao botao_amarelo = new Botao();
+        Botao botaoAmarelo = new Botao();
             // atributos:
-                botao_amarelo.setCor("amarelo");
-                botao_amarelo.setLargura(100);
-                botao_amarelo.setAltura(40);
-                botao_amarelo.setTipoBorda(TipoBordaEnum.TRACEJADA);
+                botaoAmarelo.setCor("Amarelo");
+                botaoAmarelo.setLargura(100);
+                botaoAmarelo.setAltura(40);
+                botaoAmarelo.setTipoBorda(TipoBordaEnum.TRACEJADA);
                 
-        Botao botao_vermelho = new Botao();
+        Botao botaoVermelho = new Botao();
             // atributos:
-                botao_vermelho.setCor("Vermelho");
-                botao_vermelho.setAltura(30);
-                botao_vermelho.setLargura(160);
-                botao_vermelho.setTipoBorda(TipoBordaEnum.FINA);
+                botaoVermelho.setCor("Vermelho");
+                botaoVermelho.setAltura(30);
+                botaoVermelho.setLargura(160);
+                botaoVermelho.setTipoBorda(TipoBordaEnum.FINA);
                 
-        Botao botao_azul = new Botao();
+        Botao botaoAzul = new Botao();
             // atributos:
-                botao_azul.setCor("azul");
-                botao_azul.setLargura(35);
-                botao_azul.setAltura(125);
-                botao_azul.setTipoBorda(TipoBordaEnum.TRACEJADA);
+                botaoAzul.setCor("Azul");
+                botaoAzul.setLargura(35);
+                botaoAzul.setAltura(125);
+                botaoAzul.setTipoBorda(TipoBordaEnum.TRACEJADA);
         
         /* add botões (Registrador de botões):
                 Se eu passar uma chave (ex: do botão amarelo) o registrador vai devolver uma instância ( do botão amarelo)
                 
                 */
         
-        REGISTRY.put("BOTAO_AMARELO", botao_amarelo);
-        REGISTRY.put("BOTAO_VERMELHO", botao_vermelho);
-        REGISTRY.put("BOTAO_AZUL", botao_azul);
+        REGISTRY.put("BOTAO_AMARELO", botaoAmarelo);
+        REGISTRY.put("BOTAO_VERMELHO", botaoVermelho);
+        REGISTRY.put("BOTAO_AZUL", botaoAzul);
     }
     
     public static BotaoRegistry getInstance(){ // método getInstance p pegar uma instância do meu botão Registry
