@@ -4,17 +4,17 @@ package prototype.solution;
 import prototype.Botao;
 
 
-class BotaoFactory {
+public class BotaoFactory {
 
-    static void getInstance(Botao prototipo) {
+    public static Botao getInstance(Botao prototipo) {
         
-        Botao botao - new Botao();
-            botao.setCor(prototipo.getCor());
-            botao.setLargura(prototipo.getLargura());
-            botao.setAltura(prototipo.getAltura());
-            botao.setTipoBorda(prototipo.getTipoBorda());
+        Botao clone = new Botao();
+            clone.setCor(prototipo.getCor());
+            clone.setLargura(prototipo.getLargura());
+            clone.setAltura(prototipo.getAltura());
+            clone.setTipoBorda(prototipo.getTipoBorda()); 
             
-            botao;
+            return clone;
         
     }
     
