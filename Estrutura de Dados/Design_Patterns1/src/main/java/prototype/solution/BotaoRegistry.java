@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import prototype.Botao;
+import prototype.TipoBordaEnum;
 
 public class BotaoRegistry { // aplicar Singleton
     
@@ -16,8 +17,19 @@ public class BotaoRegistry { // aplicar Singleton
     static {
         // criar os botões e inicializar:
         Botao botao_amarelo = new Botao();
+            // atributos:
+                botao_amarelo.setCor("amarelo");
+                botao_amarelo.setLargura(100);
+                botao_amarelo.setAltura(40);
+                botao_amarelo.setTipoBorda(TipoBordaEnum.TRACEJADA);
+                
         Botao botao_vermelho = new Botao();
         Botao botao_azul = new Botao();
+            // atributos:
+                botao_azul.setCor("azul");
+                botao_azul.setLargura(35);
+                botao_azul.setAltura(125);
+                botao_azul.setTipoBorda(TipoBordaEnum.TRACEJADA);
         
         // add botões:
         REGISTRY.put("BOTAO_AMARELO", botao_amarelo);
