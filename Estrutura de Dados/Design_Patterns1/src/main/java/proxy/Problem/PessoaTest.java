@@ -1,7 +1,10 @@
 // pacote
 package proxy.Problem;
 
+
+
 import builder.problem.Solution.Pessoa;
+import java.time.LocalDate;
 import proxy.PessoaRepository;
 import proxy.PessoaService;
 
@@ -13,7 +16,7 @@ public class PessoaTest {
         
         Pessoa pessoa = new Pessoa.PessoaBuilder()
                 .sobrenome("Rabelo")
-                .dataNascimento(2001,03,06)
+                .dataNascimento(LocalDate.of(2001,03,06))
                 .nome("Andressa")
                 .apelido("Dressa")
                 .documento("12312312312")

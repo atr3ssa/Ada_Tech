@@ -99,7 +99,7 @@ public class Pessoa {
     
     // Caso seja necessário por o PessoaBuider em outra classe:
     
-   static class PessoaBuilder { // mudar para estático, consigo acessar fora
+   public static class PessoaBuilder { // mudar para estático, consigo acessar fora
     // uma estrutura da qual posso criar objetos concretos
             //  Uma classe é uma planta e as casas criadas a partir dessa planta, são os objetos (criados a partir dos construtores
     

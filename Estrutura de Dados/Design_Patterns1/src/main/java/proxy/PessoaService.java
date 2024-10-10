@@ -22,5 +22,7 @@ public class PessoaService { // minha classe de serviço
      public Pessoa findById(Long id){ // vai receber um id por parâmetro e retornar pessoa de acordo com o id
         return pessoaRepository.findById(id);
     }
+       
+    }
 
-}
+
