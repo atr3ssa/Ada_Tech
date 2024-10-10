@@ -1,6 +1,7 @@
 // pacote
 package proxy;
 
+import builder.problem.Solution.Pessoa;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,5 +1,7 @@
 package proxy;
 
+import builder.problem.Solution.Pessoa;
+
 
 public class PessoaService { // minha classe de serviço
 
