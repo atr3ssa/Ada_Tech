@@ -7,7 +7,8 @@ import proxy.PessoaService;
 
 public class PessoaTestProxy {
      public static void main(String[] args){
-         PessoaRepositoryProxy pessoaRepositoryProxy = new PessoaRepositoryProxy();
+        PessoaRepositoryProxy pessoaRepositoryProxy = new PessoaRepositoryProxy();
+         new NovoPessoaRepositoryProxy();
         PessoaService pessoaService = new PessoaService(new PessoaRepositoryProxy()); // injetando a dependencia
         
         Pessoa pessoa = new Pessoa.PessoaBuilder()
@@ -20,11 +21,19 @@ public class PessoaTestProxy {
         
         pessoaService.save(pessoa);
         
-        Pessoa pessoaRetornada = pessoaService.findById(1L);
+        Pessoa pessoaRetornada = pessoaService.findById(1L); // sem usar o cache
         System.out.println(pessoaRetornada);
         
+        Pessoa pessoaRetornadaCache = pessoaService.findById(1L); // com o cache (tempo de duração da chamada mais rápido)
+        System.out.println(pessoaRetornadaCache);
+        
+        
+        // auditoria? use log
+        // performance? use cache
         // Proxy: Quero por log, mas n´posso alterar a classe (PessoaRepository) ou quero fazer cash para melhorar a performance e ficar mais rapido
         // Service vai chamar o proxy que vai chamar o pessoaRepository
+        
+        // estudar sobre Spring
         
         
     }
