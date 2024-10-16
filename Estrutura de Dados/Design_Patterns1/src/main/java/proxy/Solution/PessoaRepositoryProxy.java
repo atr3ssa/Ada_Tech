@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.logging.Logger;
 import proxy.PessoaRepository;
 
-public class PessoaRepositoryProxy extends PessoaRepository{
+public class PessoaRepositoryProxy extends PessoaRepository implements ProxyPessoa{
     // criar Cache
     private Map<Long, Pessoa>cache = new HashMap<>();// simular cache, usando um HashMap
     
