@@ -19,6 +19,9 @@ public class PessoaRepositoryProxy extends PessoaRepository{
     
     @Override
     public Pessoa findById(Long Id){
-        return super.findById(Id);
+        log.info("Iniciando chamada do método findById...");
+        Pessoa pessoa = super.findById(Id);
+        log.info("Chamada do método findById finalizada");
+        return pessoa;
     }
 }
