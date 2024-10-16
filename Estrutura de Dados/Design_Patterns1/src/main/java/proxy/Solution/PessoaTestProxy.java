@@ -23,7 +23,7 @@ public class PessoaTestProxy {
         Pessoa pessoaRetornada = pessoaService.findById(1L);
         System.out.println(pessoaRetornada);
         
-        // Proxy: Quero por log, mas n´posso alterar a classe (PessoaRepository)
+        // Proxy: Quero por log, mas n´posso alterar a classe (PessoaRepository) ou quero fazer cash para melhorar a performance e ficar mais rapido
         // Service vai chamar o proxy que vai chamar o pessoaRepository
         
         

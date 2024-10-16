@@ -2,12 +2,16 @@
 package proxy.Solution;
 
 import builder.problem.Solution.Pessoa;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 import proxy.PessoaRepository;
 
-public class PessoaRepositoryProxy extends PessoaRepository{ 
+public class PessoaRepositoryProxy extends PessoaRepository{
+    // criar Cache
+    private Map<Long, Pessoa>cache = new HashMap<>();// simular cache, usando um HashMap
     
-    //add log
+    // add log
     private static Logger log = Logger.getLogger(PessoaRepositoryProxy.class.getName());
     
     @Override// Sobrescrever os métodos
