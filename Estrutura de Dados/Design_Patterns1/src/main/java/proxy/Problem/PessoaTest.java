@@ -11,6 +11,7 @@ import proxy.PessoaService;
 
 public class PessoaTest {
     
+    /*
     public static void main(String[] args){
         PessoaService pessoaService = new PessoaService(new PessoaRepository()); // injetando a dependencia
         
@@ -31,6 +32,6 @@ public class PessoaTest {
         // Service vai chamar o proxy que vai chamar o pessoaRepository
         
         
-    }
+    } */
     
 }

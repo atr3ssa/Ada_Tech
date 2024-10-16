@@ -7,6 +7,7 @@ import proxy.PessoaService;
 
 public class PessoaTestProxy {
      public static void main(String[] args){
+         PessoaRepositoryProxy pessoaRepositoryProxy = new PessoaRepositoryProxy();
         PessoaService pessoaService = new PessoaService(new PessoaRepositoryProxy()); // injetando a dependencia
         
         Pessoa pessoa = new Pessoa.PessoaBuilder()
