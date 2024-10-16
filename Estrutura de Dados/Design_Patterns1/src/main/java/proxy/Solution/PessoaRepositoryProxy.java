@@ -1,7 +1,24 @@
 // pacote
 package proxy.Solution;
 
+import builder.problem.Solution.Pessoa;
+import java.util.logging.Logger;
+import proxy.PessoaRepository;
 
-public class PessoaRepositoryProxy {
+public class PessoaRepositoryProxy extends PessoaRepository{ 
     
+    //add log
+    private static Logger log = Logger.getLogger(PessoaRepositoryProxy.class.getName());
+    
+    @Override// Sobrescrever os métodos
+    public void save(Pessoa pessoa){
+        log.info("Iniciando chamada do método save...");
+        super.save(pessoa); // super= classe pai
+        log.info("Chamada do método save finalizada");
+    }
+    
+    @Override
+    public Pessoa findById(Long Id){
+        return super.findById(Id);
+    }
 }
