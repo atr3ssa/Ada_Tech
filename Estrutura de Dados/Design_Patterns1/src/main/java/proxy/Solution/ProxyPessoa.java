@@ -4,7 +4,7 @@ package proxy.Solution;
 import builder.problem.Solution.Pessoa;
 
 
-public interface ProxyPessoa {
+public interface ProxyPessoa { // usado como polimorfismo
     
     // abstrato
     void save(Pessoa pessoa);
