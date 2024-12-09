@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class ClientJarOperacoesContaCorrenteAdapter {
     private JarOperacoesContaCorrenteAdapter jarContaAdapter;
     
-    public ClientJarOperacoesContaCorrenteAdapter(JarOperacoesContaCorrenteAdapter jarContaadapter){
+    public ClientJarOperacoesContaCorrenteAdapter(JarOperacoesContaCorrente jarContaadapter){
         this.jarContaAdapter=jarContaAdapter; // constructor (está recebendo o jar)
     }
     

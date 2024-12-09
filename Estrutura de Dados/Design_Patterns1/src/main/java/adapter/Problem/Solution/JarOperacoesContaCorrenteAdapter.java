@@ -15,6 +15,10 @@ public class JarOperacoesContaCorrenteAdapter {
     public JarOperacoesContaCorrenteAdapter(JarOperacoesContaCorrente jarConta) {
         this.jarConta = jarConta;
     }
+
+    JarOperacoesContaCorrenteAdapter() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     // métodos (do seu Jar)
     
