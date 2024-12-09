@@ -15,6 +15,7 @@ public class TestOperacoesContaCorrente {
        // realizar operações:
        BigDecimal valorPretendidoParaSaque = new BigDecimal(1000 /* valor para sacar */); // quando trabalhar com moedas, melhor usar o Bigdecimal
        
+       //sem esse if, o cara pode sacar quanto ele quiser;
        if (client.validaSaldo(valorPretendidoParaSaque)){// se o saldo for validado
            client.saca(valorPretendidoParaSaque); // sacar o valor pretendido
            
