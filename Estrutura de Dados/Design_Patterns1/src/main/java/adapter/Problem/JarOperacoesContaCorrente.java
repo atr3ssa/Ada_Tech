@@ -8,7 +8,7 @@ public class JarOperacoesContaCorrente {
     // para simular um JAR
     
     // métodos (do seu Jar)
-    public boolean validaSaldo(BigDecimal valorPretendidoSangue){ // validar o saldo
+    public boolean validaSaldo(BigDecimal valorPretendidoSaque){ // validar o saldo
         System.out.println("validando o saldo...");
         return true;
     }
