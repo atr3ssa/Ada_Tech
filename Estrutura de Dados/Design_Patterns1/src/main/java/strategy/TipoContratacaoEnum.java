@@ -2,12 +2,6 @@
 package strategy;
 
  
-public class TipoContratacaoEnum {
-    
-    CLT,
-            
-    PJ,
-            
-    ESTAGIO;
-    
+public enum  TipoContratacaoEnum { 
+    CLT,PJ,ESTAGIO;
 }
