@@ -1,10 +1,10 @@
 // pacote
 package strategy;
 
-
+ 
 public class TipoContratacaoEnum {
     
-    CLT,
+    CLT;
             
     PJ,
             
