@@ -28,4 +28,6 @@ public class ReajusteAnualSalario {
             funcionario.setSalario(salario.add(salario.multiply(new BigDecimal(0.02))));}
     }
     
+    //strategy: conforme um parâmetro especifico eu aplico uma area de negócio. Não precisar alterar a classe quando um novo parâmetro surgir
+    
 }
