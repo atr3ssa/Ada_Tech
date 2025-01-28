@@ -11,15 +11,15 @@ public class VendaCarroService {
        BigDecimal valorVenda = carro.getPreco();
        
        if (Marca.FIAT.equals(carro.getMarca())){
-         return valorVenda.substract(new BigDecimal(1000));  
+         return valorVenda.subtract(new BigDecimal(1000));  
        }
        
        if (Marca.FORD.equals(carro.getMarca())){
-           return valorVenda.substract(new BigDecimal(2000));
+           return valorVenda.subtract(new BigDecimal(2000));
        }
        
        if (carro.getPreco().compareTo(new BigDecimal(100000.00)) > 0){
-           return valorVenda.substract(new BigDecimal(10000));
+           return valorVenda.subtract(new BigDecimal(10000));
        }
     }
     
